@@ -1,0 +1,6 @@
+.nextflow.log
+.nextflow/
+data/
+results/
+slurm-*
+sandbox/

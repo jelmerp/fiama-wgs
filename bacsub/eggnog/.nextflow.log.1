@@ -1,0 +1,62 @@
+Dec-17 20:50:01.363 [main] DEBUG nextflow.cli.Launcher - $> nextflow run /fs/project/PAS0471/jelmer/conda/bactopia3//share/bactopia-3.0.0/main.nf --wf eggnog --bactopia /fs/ess/PAS0471/jelmer/assist/2023-12_fiama/results/bactopia --outdir /fs/ess/PAS0471/jelmer/assist/2023-12_fiama/results/bactopia --run_name bactopia --singularity_cache /fs/project/PAS0471/containers --max_cpus 48 --max_time 1440 --max_memory 128 --max_retry 1 -qs 100 -w /fs/scratch/PAS0471/jelmer/bactopia -profile singularity -resume -c /fs/ess/PAS0471/jelmer/assist/2023-12_fiama/results/bactopia/osc.config -ansi-log false --eggnog_db /fs/ess/PAS0471/jelmer/refdata/eggnog
+Dec-17 20:50:01.527 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 23.10.0
+Dec-17 20:50:01.562 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/users/PAS0471/jelmer/.nextflow/plugins; core-plugins: nf-amazon@2.1.4,nf-azure@1.3.2,nf-cloudcache@0.3.0,nf-codecommit@0.1.5,nf-console@1.0.6,nf-ga4gh@1.1.0,nf-google@1.8.3,nf-tower@1.6.3,nf-wave@1.0.0
+Dec-17 20:50:01.573 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Dec-17 20:50:01.574 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Dec-17 20:50:01.578 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
+Dec-17 20:50:01.588 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Dec-17 20:50:01.602 [main] DEBUG nextflow.config.ConfigBuilder - Found config base: /fs/project/PAS0471/jelmer/conda/bactopia3/share/bactopia-3.0.0/nextflow.config
+Dec-17 20:50:01.607 [main] DEBUG nextflow.config.ConfigBuilder - User config file: /fs/ess/PAS0471/jelmer/assist/2023-12_fiama/results/bactopia/osc.config
+Dec-17 20:50:01.608 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /fs/project/PAS0471/jelmer/conda/bactopia3/share/bactopia-3.0.0/nextflow.config
+Dec-17 20:50:01.608 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /fs/ess/PAS0471/jelmer/assist/2023-12_fiama/results/bactopia/osc.config
+Dec-17 20:50:01.630 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `singularity`
+Dec-17 20:50:02.984 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `singularity`
+Dec-17 20:50:03.037 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [standard, test, wsvl, local, docker, sge, slurm, gcp, mamba, conda, singularity, aws, arcc, arm]
+Dec-17 20:50:03.074 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 from script declararion
+Dec-17 20:50:03.089 [main] INFO  nextflow.cli.CmdRun - Launching `/fs/project/PAS0471/jelmer/conda/bactopia3/share/bactopia-3.0.0/main.nf` [tiny_curry] DSL2 - revision: 0cd9f79ba7
+Dec-17 20:50:03.090 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Dec-17 20:50:03.090 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
+Dec-17 20:50:03.098 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /users/PAS0471/jelmer/.nextflow/secrets/store.json
+Dec-17 20:50:03.101 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@21ea996f] - activable => nextflow.secret.LocalSecretsProvider@21ea996f
+Dec-17 20:50:03.147 [main] DEBUG nextflow.Session - Session UUID: a7767bdf-f73c-4ed7-921a-f0dc22dd6151
+Dec-17 20:50:03.147 [main] DEBUG nextflow.Session - Run name: tiny_curry
+Dec-17 20:50:03.147 [main] DEBUG nextflow.Session - Executor pool size: 10
+Dec-17 20:50:03.153 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
+Dec-17 20:50:03.210 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 23.10.0 build 5889
+  Created: 15-10-2023 15:07 UTC (11:07 EDT)
+  System: Linux 3.10.0-1160.95.1.el7.x86_64
+  Runtime: Groovy 3.0.19 on OpenJDK 64-Bit Server VM 21-internal-adhoc.conda.src
+  Encoding: UTF-8 (UTF-8)
+  Process: 230099@p0193.ten.osc.edu [10.4.4.30]
+  CPUs: 10 - Mem: 40 GB (39.6 GB) - Swap: 0 (0) - Virtual threads ON
+Dec-17 20:50:03.322 [main] DEBUG nextflow.Session - Work-dir: /fs/scratch/PAS0471/jelmer/bactopia [gpfs]
+Dec-17 20:50:03.364 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Dec-17 20:50:03.382 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Dec-17 20:50:03.446 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Dec-17 20:50:03.456 [main] DEBUG nextflow.util.CustomPoolFactory - Creating virtual thread pool
+Dec-17 20:50:03.476 [main] ERROR nextflow.cli.Launcher - Unable to acquire lock on session with ID a7767bdf-f73c-4ed7-921a-f0dc22dd6151
+
+Common reasons for this error are:
+ - You are trying to resume the execution of an already running pipeline
+ - A previous execution was abruptly interrupted, leaving the session open
+
+You can see which process is holding the lock file by using the following command:
+ - lsof /fs/ess/PAS0471/jelmer/assist/2023-12_fiama/bacsub/eggnog/.nextflow/cache/a7767bdf-f73c-4ed7-921a-f0dc22dd6151/db/LOCK
+java.io.IOException: Unable to acquire lock on session with ID a7767bdf-f73c-4ed7-921a-f0dc22dd6151
+
+Common reasons for this error are:
+ - You are trying to resume the execution of an already running pipeline
+ - A previous execution was abruptly interrupted, leaving the session open
+
+You can see which process is holding the lock file by using the following command:
+ - lsof /fs/ess/PAS0471/jelmer/assist/2023-12_fiama/bacsub/eggnog/.nextflow/cache/a7767bdf-f73c-4ed7-921a-f0dc22dd6151/db/LOCK
+	at nextflow.cache.DefaultCacheStore.openDb(DefaultCacheStore.groovy:91)
+	at nextflow.cache.DefaultCacheStore.open(DefaultCacheStore.groovy:106)
+	at nextflow.cache.DefaultCacheStore.open(DefaultCacheStore.groovy)
+	at nextflow.cache.CacheDB.open(CacheDB.groovy:59)
+	at nextflow.Session.init(Session.groovy:420)
+	at nextflow.script.ScriptRunner.execute(ScriptRunner.groovy:128)
+	at nextflow.cli.CmdRun.run(CmdRun.groovy:372)
+	at nextflow.cli.Launcher.run(Launcher.groovy:499)
+	at nextflow.cli.Launcher.main(Launcher.groovy:670)

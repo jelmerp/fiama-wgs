@@ -1,0 +1,176 @@
+Dec-16 16:42:35.460 [main] DEBUG nextflow.cli.Launcher - $> nextflow run /fs/project/PAS0471/jelmer/conda/bactopia3//share/bactopia-3.0.0/main.nf --wf mashtree --bactopia /fs/ess/PAS0471/jelmer/assist/2023-12_fiama/results/bactopia --outdir /fs/ess/PAS0471/jelmer/assist/2023-12_fiama/results/bactopia --run_name bactopia --singularity_cache /fs/project/PAS0471/containers --max_cpus 48 --max_time 1440 --max_memory 128 --max_retry 1 -qs 100 -w /fs/scratch/PAS0471/jelmer/bactopia -profile singularity -resume -c /fs/ess/PAS0471/jelmer/assist/2023-12_fiama/results/bactopia/osc.config -ansi-log false
+Dec-16 16:42:35.514 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 23.10.0
+Dec-16 16:42:35.544 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/users/PAS0471/jelmer/.nextflow/plugins; core-plugins: nf-amazon@2.1.4,nf-azure@1.3.2,nf-cloudcache@0.3.0,nf-codecommit@0.1.5,nf-console@1.0.6,nf-ga4gh@1.1.0,nf-google@1.8.3,nf-tower@1.6.3,nf-wave@1.0.0
+Dec-16 16:42:35.554 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Dec-16 16:42:35.555 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Dec-16 16:42:35.558 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
+Dec-16 16:42:35.567 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Dec-16 16:42:35.582 [main] DEBUG nextflow.config.ConfigBuilder - Found config base: /fs/project/PAS0471/jelmer/conda/bactopia3/share/bactopia-3.0.0/nextflow.config
+Dec-16 16:42:35.589 [main] DEBUG nextflow.config.ConfigBuilder - User config file: /fs/ess/PAS0471/jelmer/assist/2023-12_fiama/results/bactopia/osc.config
+Dec-16 16:42:35.589 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /fs/project/PAS0471/jelmer/conda/bactopia3/share/bactopia-3.0.0/nextflow.config
+Dec-16 16:42:35.589 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /fs/ess/PAS0471/jelmer/assist/2023-12_fiama/results/bactopia/osc.config
+Dec-16 16:42:35.613 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `singularity`
+Dec-16 16:42:37.101 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `singularity`
+Dec-16 16:42:37.151 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [standard, test, wsvl, local, docker, sge, slurm, gcp, mamba, conda, singularity, aws, arcc, arm]
+Dec-16 16:42:37.158 [main] WARN  nextflow.config.ConfigBuilder - It appears you have never run this project before -- Option `-resume` is ignored
+Dec-16 16:42:37.202 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 from script declararion
+Dec-16 16:42:37.217 [main] INFO  nextflow.cli.CmdRun - Launching `/fs/project/PAS0471/jelmer/conda/bactopia3/share/bactopia-3.0.0/main.nf` [agitated_faraday] DSL2 - revision: 0cd9f79ba7
+Dec-16 16:42:37.218 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Dec-16 16:42:37.218 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
+Dec-16 16:42:37.226 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /users/PAS0471/jelmer/.nextflow/secrets/store.json
+Dec-16 16:42:37.229 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@4f281aaf] - activable => nextflow.secret.LocalSecretsProvider@4f281aaf
+Dec-16 16:42:37.289 [main] DEBUG nextflow.Session - Session UUID: 424dbb9c-341b-42a9-8740-96769d296973
+Dec-16 16:42:37.289 [main] DEBUG nextflow.Session - Run name: agitated_faraday
+Dec-16 16:42:37.290 [main] DEBUG nextflow.Session - Executor pool size: 10
+Dec-16 16:42:37.296 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
+Dec-16 16:42:37.323 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 23.10.0 build 5889
+  Created: 15-10-2023 15:07 UTC (11:07 EDT)
+  System: Linux 3.10.0-1160.95.1.el7.x86_64
+  Runtime: Groovy 3.0.19 on OpenJDK 64-Bit Server VM 21-internal-adhoc.conda.src
+  Encoding: UTF-8 (UTF-8)
+  Process: 19938@p0040.ten.osc.edu [10.4.1.39]
+  CPUs: 10 - Mem: 40 GB (39.6 GB) - Swap: 0 (0) - Virtual threads ON
+Dec-16 16:42:37.417 [main] DEBUG nextflow.Session - Work-dir: /fs/scratch/PAS0471/jelmer/bactopia [gpfs]
+Dec-16 16:42:37.468 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Dec-16 16:42:37.491 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Dec-16 16:42:37.595 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Dec-16 16:42:37.608 [main] DEBUG nextflow.util.CustomPoolFactory - Creating virtual thread pool
+Dec-16 16:42:37.721 [main] DEBUG nextflow.Session - Session start
+Dec-16 16:42:37.726 [main] DEBUG nextflow.trace.TraceFileObserver - Workflow started -- trace file: /fs/ess/PAS0471/jelmer/assist/2023-12_fiama/results/bactopia/bactopia-runs/mashtree-20231216-164236/nf-reports/mashtree-trace.txt
+Dec-16 16:42:37.734 [main] DEBUG nextflow.Session - Using default localLib path: /fs/project/PAS0471/jelmer/conda/bactopia3/share/bactopia-3.0.0/lib
+Dec-16 16:42:37.744 [main] DEBUG nextflow.Session - Adding to the classpath library: /fs/project/PAS0471/jelmer/conda/bactopia3/share/bactopia-3.0.0/lib
+Dec-16 16:42:37.745 [main] DEBUG nextflow.Session - Adding to the classpath library: /fs/project/PAS0471/jelmer/conda/bactopia3/share/bactopia-3.0.0/lib/nfcore_external_java_deps.jar
+Dec-16 16:42:37.902 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Dec-16 16:42:39.503 [main] WARN  nextflow.Nextflow - Maximum memory (128) was adjusted to fit your system (40)
+Dec-16 16:42:39.506 [main] WARN  nextflow.Nextflow - Maximum CPUs (48) was adjusted to fit your system (10)
+Dec-16 16:42:39.709 [main] INFO  nextflow.Nextflow - 
+
+-[2m------------------------------------------------------------------[0m-
+[0;34m   _                _              _         _              _              [0m
+[0;34m  | |__   __ _  ___| |_ ___  _ __ (_) __ _  | |_ ___   ___ | |___          [0m
+[0;34m  | '_ \ / _` |/ __| __/ _ \| '_ \| |/ _` | | __/ _ \ / _ \| / __|    [0m
+[0;34m  | |_) | (_| | (__| || (_) | |_) | | (_| | | || (_) | (_) | \__ \        [0m
+[0;34m  |_.__/ \__,_|\___|\__\___/| .__/|_|\__,_|  \__\___/ \___/|_|___/ [0m
+[0;34m                            |_|                                            [0m
+[0;36m  bactopia tools mashtree v3.0.0[0m
+[0;36m  Create a trees using Mash distances [0m
+-[2m------------------------------------------------------------------[0m-
+[1mCore Nextflow options[0m
+  [0;34mrunName          : [0;32magitated_faraday[0m
+  [0;34mcontainerEngine  : [0;32msingularity[0m
+  [0;34mcontainer        : [0;32mquay.io/bactopia/bactopia:3.0.0[0m
+  [0;34mlaunchDir        : [0;32m/fs/ess/PAS0471/jelmer/assist/2023-12_fiama/bacsub/mashtree[0m
+  [0;34mworkDir          : [0;32m/fs/scratch/PAS0471/jelmer/bactopia[0m
+  [0;34mprojectDir       : [0;32m/fs/project/PAS0471/jelmer/conda/bactopia3/share/bactopia-3.0.0[0m
+  [0;34muserName         : [0;32mjelmer[0m
+  [0;34mprofile          : [0;32msingularity[0m
+  [0;34mconfigFiles      : [0;32m/fs/project/PAS0471/jelmer/conda/bactopia3/share/bactopia-3.0.0/nextflow.config, /fs/ess/PAS0471/jelmer/assist/2023-12_fiama/results/bactopia/osc.config[0m
+
+[1mRequired Parameters[0m
+  [0;34mbactopia         : [0;32m/fs/ess/PAS0471/jelmer/assist/2023-12_fiama/results/bactopia[0m
+
+[1mOptional Parameters[0m
+  [0;34moutdir           : [0;32m/fs/ess/PAS0471/jelmer/assist/2023-12_fiama/results/bactopia[0m
+
+[1mMax Job Request Parameters[0m
+  [0;34mmax_retry        : [0;32m1[0m
+  [0;34mmax_cpus         : [0;32m48[0m
+  [0;34mmax_memory       : [0;32m128[0m
+  [0;34mmax_time         : [0;32m1440[0m
+
+[1mNextflow Profile Parameters[0m
+  [0;34mcondadir         : [0;32m/users/PAS0471/jelmer/.bactopia/conda[0m
+  [0;34mdatasets_cache   : [0;32m/users/PAS0471/jelmer/.bactopia/datasets[0m
+  [0;34msingularity_cache: [0;32m/fs/project/PAS0471/containers[0m
+
+[1mHelpful Parameters[0m
+  [0;34mwf               : [0;32mmashtree[0m
+
+!! Only displaying parameters that differ from the pipeline defaults !!
+-[2m------------------------------------------------------------------[0m-
+If you use bactopia for your analysis please cite:
+
+* Bactopia
+  https://doi.org/10.1128/mSystems.00190-20
+
+* The nf-core framework
+  https://doi.org/10.1038/s41587-020-0439-x
+
+* Software dependencies
+  https://bactopia.github.io/acknowledgements/
+-[2m------------------------------------------------------------------[0m-
+Dec-16 16:42:40.012 [main] WARN  nextflow.Nextflow - Maximum memory (128) was adjusted to fit your system (40)
+Dec-16 16:42:40.013 [main] WARN  nextflow.Nextflow - Maximum CPUs (48) was adjusted to fit your system (10)
+Dec-16 16:42:40.258 [main] WARN  nextflow.Nextflow - Maximum memory (128) was adjusted to fit your system (40)
+Dec-16 16:42:40.259 [main] WARN  nextflow.Nextflow - Maximum CPUs (48) was adjusted to fit your system (10)
+Dec-16 16:42:40.359 [main] WARN  nextflow.Nextflow - Maximum memory (128) was adjusted to fit your system (40)
+Dec-16 16:42:40.360 [main] WARN  nextflow.Nextflow - Maximum CPUs (48) was adjusted to fit your system (10)
+Dec-16 16:42:40.369 [main] INFO  nextflow.Nextflow - 
+Each task will use 10 CPUs out of the available 10 CPUs. At most 
+1 task(s) will be run at a time, this can affect the efficiency 
+of Bactopia. You can use the '-qs' parameter to alter the number of 
+tasks to run at a time (e.g. '-qs 2', means only 2 tasks or a maximum 
+of 20 CPUs will be used at once)
+
+Dec-16 16:42:40.369 [main] INFO  nextflow.Nextflow - 
+Dec-16 16:42:40.561 [main] INFO  nextflow.Nextflow - Found 72 samples to process
+Dec-16 16:42:40.562 [main] INFO  nextflow.Nextflow - 3 samples were excluded due to missing files. They are:
+Dec-16 16:42:40.562 [main] INFO  nextflow.Nextflow -     logs
+Dec-16 16:42:40.562 [main] INFO  nextflow.Nextflow -     asm_files
+Dec-16 16:42:40.562 [main] INFO  nextflow.Nextflow -     NCL
+Dec-16 16:42:40.562 [main] INFO  nextflow.Nextflow - 
+If this looks wrong, now's your chance to back out (CTRL+C 3 times).
+Dec-16 16:42:40.562 [main] INFO  nextflow.Nextflow - Sleeping for 5 seconds...
+Dec-16 16:42:40.562 [main] INFO  nextflow.Nextflow - --------------------------------------------------------------------
+Dec-16 16:42:45.715 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name BACTOPIATOOLS:MASHTREE:MASHTREE_MODULE
+Dec-16 16:42:45.722 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Dec-16 16:42:45.722 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Dec-16 16:42:45.730 [main] DEBUG nextflow.executor.Executor - [warm up] executor > slurm
+Dec-16 16:42:45.763 [main] DEBUG n.processor.TaskPollingMonitor - Creating task monitor for executor 'slurm' > capacity: 100; pollInterval: 5s; dumpInterval: 5m 
+Dec-16 16:42:45.765 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: slurm)
+Dec-16 16:42:45.766 [main] DEBUG n.executor.AbstractGridExecutor - Creating executor 'slurm' > queue-stat-interval: 1m
+Dec-16 16:42:45.843 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low` for process with name BACTOPIATOOLS:CUSTOM_DUMPSOFTWAREVERSIONS
+Dec-16 16:42:45.844 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Dec-16 16:42:45.844 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Dec-16 16:42:45.846 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: BACTOPIATOOLS:MASHTREE:MASHTREE_MODULE, MASHTREE_MODULE, MASHTREE, CUSTOM_DUMPSOFTWAREVERSIONS, NCBIGENOMEDOWNLOAD_MODULE, NCBIGENOMEDOWNLOAD, BACTOPIATOOLS:CUSTOM_DUMPSOFTWAREVERSIONS
+Dec-16 16:42:45.848 [main] DEBUG nextflow.Session - Igniting dataflow network (9)
+Dec-16 16:42:45.850 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > BACTOPIATOOLS:MASHTREE:MASHTREE_MODULE
+Dec-16 16:42:45.850 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > BACTOPIATOOLS:CUSTOM_DUMPSOFTWAREVERSIONS
+Dec-16 16:42:45.853 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
+  Script_fd93f89b2d1b45db: /fs/project/PAS0471/jelmer/conda/bactopia3/share/bactopia-3.0.0/./workflows/../subworkflows/local/ncbigenomedownload/main.nf
+  Script_fc43e2db730cad08: /fs/project/PAS0471/jelmer/conda/bactopia3/share/bactopia-3.0.0/./workflows/../lib/nf/bactopia_tools.nf
+  Script_6a8dd2801d865dab: /fs/project/PAS0471/jelmer/conda/bactopia3/share/bactopia-3.0.0/./workflows/../subworkflows/local/mashtree/main.nf
+  Script_26d363606f94d836: /fs/project/PAS0471/jelmer/conda/bactopia3/share/bactopia-3.0.0/./workflows/../modules/nf-core/custom/dumpsoftwareversions/main.nf
+  Script_6ffa8c5ec53b2617: /fs/project/PAS0471/jelmer/conda/bactopia3/share/bactopia-3.0.0/./workflows/../lib/nf/functions.nf
+  Script_a31f101441362f7c: /fs/project/PAS0471/jelmer/conda/bactopia3/share/bactopia-3.0.0/./workflows/../subworkflows/local/mashtree/../../../modules/nf-core/mashtree/main.nf
+  Script_d282f956d8c4ed22: /fs/project/PAS0471/jelmer/conda/bactopia3/share/bactopia-3.0.0/./workflows/bactopia-tools.nf
+  Script_28b956a88b5bebd6: /fs/project/PAS0471/jelmer/conda/bactopia3/share/bactopia-3.0.0/main.nf
+  Script_444d7caa809f94f7: /fs/project/PAS0471/jelmer/conda/bactopia3/share/bactopia-3.0.0/./workflows/../subworkflows/local/ncbigenomedownload/../../../modules/nf-core/ncbigenomedownload/main.nf
+Dec-16 16:42:45.853 [main] DEBUG nextflow.script.ScriptRunner - > Awaiting termination 
+Dec-16 16:42:45.853 [main] DEBUG nextflow.Session - Session await
+Dec-16 16:42:45.970 [Actor Thread 31] DEBUG nextflow.container.SingularityCache - Singularity found local store for image=https://depot.galaxyproject.org/singularity/mashtree:1.4.5--pl5321h031d066_0; path=/fs/project/PAS0471/containers/depot.galaxyproject.org-singularity-mashtree-1.4.5--pl5321h031d066_0.img
+Dec-16 16:42:46.346 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:MASHTREE:MASHTREE_MODULE (mashtree) > jobId: 25212568; workDir: /fs/scratch/PAS0471/jelmer/bactopia/14/7e615cabf4eae4eb9cf880f44146eb
+Dec-16 16:42:46.347 [Task submitter] INFO  nextflow.Session - [14/7e615c] Submitted process > BACTOPIATOOLS:MASHTREE:MASHTREE_MODULE (mashtree)
+Dec-16 16:43:20.786 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 25212568; id: 1; name: BACTOPIATOOLS:MASHTREE:MASHTREE_MODULE (mashtree); status: COMPLETED; exit: 0; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/14/7e615cabf4eae4eb9cf880f44146eb started: 1702762990783; exited: 2023-12-16T21:43:20.535081Z; ]
+Dec-16 16:43:20.953 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process BACTOPIATOOLS:MASHTREE:MASHTREE_MODULE > Skipping output binding because one or more optional files are missing: fileoutparam<2>
+Dec-16 16:43:20.954 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process BACTOPIATOOLS:MASHTREE:MASHTREE_MODULE > Skipping output binding because one or more optional files are missing: fileoutparam<3>
+Dec-16 16:43:21.148 [Actor Thread 36] DEBUG nextflow.sort.BigSort - Sort completed -- entries: 1; slices: 1; internal sort time: 0.002 s; external sort time: 0.027 s; total time: 0.029 s
+Dec-16 16:43:21.176 [Actor Thread 36] DEBUG nextflow.file.FileCollector - Saved collect-files list to: /fs/scratch/PAS0471/jelmer/bactopia/collect-file/9c69dad68d7421a819f1bfc1bca11e20
+Dec-16 16:43:21.186 [Actor Thread 44] DEBUG nextflow.container.SingularityCache - Singularity found local store for image=https://depot.galaxyproject.org/singularity/multiqc:1.15--pyhdfd78af_0; path=/fs/project/PAS0471/containers/depot.galaxyproject.org-singularity-multiqc-1.15--pyhdfd78af_0.img
+Dec-16 16:43:21.215 [Actor Thread 36] DEBUG nextflow.file.FileCollector - Deleting file collector temp dir: /tmp/slurmtmp.25212543/nxf-6381570438116804205
+Dec-16 16:43:21.443 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:CUSTOM_DUMPSOFTWAREVERSIONS (1) > jobId: 25212572; workDir: /fs/scratch/PAS0471/jelmer/bactopia/ff/095e725b2329c3895c67ef593428a7
+Dec-16 16:43:21.443 [Task submitter] INFO  nextflow.Session - [ff/095e72] Submitted process > BACTOPIATOOLS:CUSTOM_DUMPSOFTWAREVERSIONS (1)
+Dec-16 16:43:35.791 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 25212572; id: 2; name: BACTOPIATOOLS:CUSTOM_DUMPSOFTWAREVERSIONS (1); status: COMPLETED; exit: 0; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/ff/095e725b2329c3895c67ef593428a7 started: 1702763015782; exited: 2023-12-16T21:43:33.186925Z; ]
+Dec-16 16:43:35.821 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process BACTOPIATOOLS:CUSTOM_DUMPSOFTWAREVERSIONS > Skipping output binding because one or more optional files are missing: fileoutparam<2>
+Dec-16 16:43:35.834 [main] DEBUG nextflow.Session - Session await > all processes finished
+Dec-16 16:43:35.837 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: slurm) - terminating tasks monitor poll loop
+Dec-16 16:43:35.838 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Dec-16 16:43:35.844 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'PublishDir' shutdown completed (hard=false)
+Dec-16 16:43:35.861 [main] DEBUG n.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=2; failedCount=0; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=1m 31s; failedDuration=0ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=1; peakCpus=10; peakMemory=16 GB; ]
+Dec-16 16:43:35.861 [main] DEBUG nextflow.trace.TraceFileObserver - Workflow completed -- saving trace file
+Dec-16 16:43:35.863 [main] DEBUG nextflow.trace.ReportObserver - Workflow completed -- rendering execution report
+Dec-16 16:43:36.663 [main] DEBUG nextflow.trace.TimelineObserver - Workflow completed -- rendering execution timeline
+Dec-16 16:43:36.930 [main] DEBUG nextflow.cache.CacheDB - Closing CacheDB done
+Dec-16 16:43:36.947 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'FileTransfer' shutdown completed (hard=false)
+Dec-16 16:43:36.948 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye

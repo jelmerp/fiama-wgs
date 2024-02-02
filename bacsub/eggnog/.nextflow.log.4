@@ -1,0 +1,113 @@
+Dec-17 20:28:06.738 [main] DEBUG nextflow.cli.Launcher - $> nextflow run /fs/project/PAS0471/jelmer/conda/bactopia3//share/bactopia-3.0.0/main.nf --wf eggnog --bactopia /fs/ess/PAS0471/jelmer/assist/2023-12_fiama/results/bactopia --outdir /fs/ess/PAS0471/jelmer/assist/2023-12_fiama/results/bactopia --run_name bactopia --singularity_cache /fs/project/PAS0471/containers --max_cpus 48 --max_time 1440 --max_memory 128 --max_retry 1 -qs 100 -w /fs/scratch/PAS0471/jelmer/bactopia -profile singularity -resume -c /fs/ess/PAS0471/jelmer/assist/2023-12_fiama/results/bactopia/osc.config -ansi-log false --download_eggnog
+Dec-17 20:28:06.791 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 23.10.0
+Dec-17 20:28:06.837 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/users/PAS0471/jelmer/.nextflow/plugins; core-plugins: nf-amazon@2.1.4,nf-azure@1.3.2,nf-cloudcache@0.3.0,nf-codecommit@0.1.5,nf-console@1.0.6,nf-ga4gh@1.1.0,nf-google@1.8.3,nf-tower@1.6.3,nf-wave@1.0.0
+Dec-17 20:28:06.921 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Dec-17 20:28:06.923 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Dec-17 20:28:06.930 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
+Dec-17 20:28:06.948 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Dec-17 20:28:06.976 [main] DEBUG nextflow.config.ConfigBuilder - Found config base: /fs/project/PAS0471/jelmer/conda/bactopia3/share/bactopia-3.0.0/nextflow.config
+Dec-17 20:28:06.982 [main] DEBUG nextflow.config.ConfigBuilder - User config file: /fs/ess/PAS0471/jelmer/assist/2023-12_fiama/results/bactopia/osc.config
+Dec-17 20:28:06.982 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /fs/project/PAS0471/jelmer/conda/bactopia3/share/bactopia-3.0.0/nextflow.config
+Dec-17 20:28:06.982 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /fs/ess/PAS0471/jelmer/assist/2023-12_fiama/results/bactopia/osc.config
+Dec-17 20:28:07.020 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `singularity`
+Dec-17 20:28:08.389 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `singularity`
+Dec-17 20:28:08.438 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [standard, test, wsvl, local, docker, sge, slurm, gcp, mamba, conda, singularity, aws, arcc, arm]
+Dec-17 20:28:08.445 [main] WARN  nextflow.config.ConfigBuilder - It appears you have never run this project before -- Option `-resume` is ignored
+Dec-17 20:28:08.470 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 from script declararion
+Dec-17 20:28:08.483 [main] INFO  nextflow.cli.CmdRun - Launching `/fs/project/PAS0471/jelmer/conda/bactopia3/share/bactopia-3.0.0/main.nf` [exotic_kirch] DSL2 - revision: 0cd9f79ba7
+Dec-17 20:28:08.483 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Dec-17 20:28:08.483 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
+Dec-17 20:28:08.491 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /users/PAS0471/jelmer/.nextflow/secrets/store.json
+Dec-17 20:28:08.493 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@4d93f75b] - activable => nextflow.secret.LocalSecretsProvider@4d93f75b
+Dec-17 20:28:08.547 [main] DEBUG nextflow.Session - Session UUID: a7767bdf-f73c-4ed7-921a-f0dc22dd6151
+Dec-17 20:28:08.547 [main] DEBUG nextflow.Session - Run name: exotic_kirch
+Dec-17 20:28:08.547 [main] DEBUG nextflow.Session - Executor pool size: 10
+Dec-17 20:28:08.553 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
+Dec-17 20:28:08.578 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 23.10.0 build 5889
+  Created: 15-10-2023 15:07 UTC (11:07 EDT)
+  System: Linux 3.10.0-1160.95.1.el7.x86_64
+  Runtime: Groovy 3.0.19 on OpenJDK 64-Bit Server VM 21-internal-adhoc.conda.src
+  Encoding: UTF-8 (UTF-8)
+  Process: 111261@p0045.ten.osc.edu [10.4.1.50]
+  CPUs: 10 - Mem: 40 GB (39.6 GB) - Swap: 0 (0) - Virtual threads ON
+Dec-17 20:28:08.701 [main] DEBUG nextflow.Session - Work-dir: /fs/scratch/PAS0471/jelmer/bactopia [gpfs]
+Dec-17 20:28:08.746 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Dec-17 20:28:08.765 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Dec-17 20:28:08.835 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Dec-17 20:28:08.844 [main] DEBUG nextflow.util.CustomPoolFactory - Creating virtual thread pool
+Dec-17 20:28:09.053 [main] DEBUG nextflow.Session - Session start
+Dec-17 20:28:09.062 [main] DEBUG nextflow.trace.TraceFileObserver - Workflow started -- trace file: /fs/ess/PAS0471/jelmer/assist/2023-12_fiama/results/bactopia/bactopia-runs/eggnog-20231217-202808/nf-reports/eggnog-trace.txt
+Dec-17 20:28:09.076 [main] DEBUG nextflow.Session - Using default localLib path: /fs/project/PAS0471/jelmer/conda/bactopia3/share/bactopia-3.0.0/lib
+Dec-17 20:28:09.088 [main] DEBUG nextflow.Session - Adding to the classpath library: /fs/project/PAS0471/jelmer/conda/bactopia3/share/bactopia-3.0.0/lib
+Dec-17 20:28:09.089 [main] DEBUG nextflow.Session - Adding to the classpath library: /fs/project/PAS0471/jelmer/conda/bactopia3/share/bactopia-3.0.0/lib/nfcore_external_java_deps.jar
+Dec-17 20:28:09.289 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Dec-17 20:28:10.715 [main] WARN  nextflow.Nextflow - Maximum memory (128) was adjusted to fit your system (40)
+Dec-17 20:28:10.717 [main] WARN  nextflow.Nextflow - Maximum CPUs (48) was adjusted to fit your system (10)
+Dec-17 20:28:10.896 [main] INFO  nextflow.Nextflow - 
+
+-[2m------------------------------------------------------------------[0m-
+[0;34m   _                _              _         _              _              [0m
+[0;34m  | |__   __ _  ___| |_ ___  _ __ (_) __ _  | |_ ___   ___ | |___          [0m
+[0;34m  | '_ \ / _` |/ __| __/ _ \| '_ \| |/ _` | | __/ _ \ / _ \| / __|    [0m
+[0;34m  | |_) | (_| | (__| || (_) | |_) | | (_| | | || (_) | (_) | \__ \        [0m
+[0;34m  |_.__/ \__,_|\___|\__\___/| .__/|_|\__,_|  \__\___/ \___/|_|___/ [0m
+[0;34m                            |_|                                            [0m
+[0;36m  bactopia tools eggnog v3.0.0[0m
+[0;36m  Functional annotation of proteins using orthologous groups and phylogenies [0m
+-[2m------------------------------------------------------------------[0m-
+[1mCore Nextflow options[0m
+  [0;34mrunName          : [0;32mexotic_kirch[0m
+  [0;34mcontainerEngine  : [0;32msingularity[0m
+  [0;34mcontainer        : [0;32mquay.io/bactopia/bactopia:3.0.0[0m
+  [0;34mlaunchDir        : [0;32m/fs/ess/PAS0471/jelmer/assist/2023-12_fiama/bacsub/eggnog[0m
+  [0;34mworkDir          : [0;32m/fs/scratch/PAS0471/jelmer/bactopia[0m
+  [0;34mprojectDir       : [0;32m/fs/project/PAS0471/jelmer/conda/bactopia3/share/bactopia-3.0.0[0m
+  [0;34muserName         : [0;32mjelmer[0m
+  [0;34mprofile          : [0;32msingularity[0m
+  [0;34mconfigFiles      : [0;32m/fs/project/PAS0471/jelmer/conda/bactopia3/share/bactopia-3.0.0/nextflow.config, /fs/ess/PAS0471/jelmer/assist/2023-12_fiama/results/bactopia/osc.config[0m
+
+[1mRequired Parameters[0m
+  [0;34mbactopia         : [0;32m/fs/ess/PAS0471/jelmer/assist/2023-12_fiama/results/bactopia[0m
+
+[1meggNOG Downloader Parameters[0m
+  [0;34mdownload_eggnog  : [0;32mtrue[0m
+
+[1mOptional Parameters[0m
+  [0;34moutdir           : [0;32m/fs/ess/PAS0471/jelmer/assist/2023-12_fiama/results/bactopia[0m
+
+[1mMax Job Request Parameters[0m
+  [0;34mmax_retry        : [0;32m1[0m
+  [0;34mmax_cpus         : [0;32m48[0m
+  [0;34mmax_memory       : [0;32m128[0m
+  [0;34mmax_time         : [0;32m1440[0m
+
+[1mNextflow Profile Parameters[0m
+  [0;34mcondadir         : [0;32m/users/PAS0471/jelmer/.bactopia/conda[0m
+  [0;34mdatasets_cache   : [0;32m/users/PAS0471/jelmer/.bactopia/datasets[0m
+  [0;34msingularity_cache: [0;32m/fs/project/PAS0471/containers[0m
+
+[1mHelpful Parameters[0m
+  [0;34mwf               : [0;32meggnog[0m
+
+!! Only displaying parameters that differ from the pipeline defaults !!
+-[2m------------------------------------------------------------------[0m-
+If you use bactopia for your analysis please cite:
+
+* Bactopia
+  https://doi.org/10.1128/mSystems.00190-20
+
+* The nf-core framework
+  https://doi.org/10.1038/s41587-020-0439-x
+
+* Software dependencies
+  https://bactopia.github.io/acknowledgements/
+-[2m------------------------------------------------------------------[0m-
+Dec-17 20:28:10.900 [main] ERROR nextflow.Nextflow - Required parameters are missing, please check: --eggnog_db
+Dec-17 20:28:10.906 [main] INFO  nextflow.Nextflow - [4m[1mRequired Parameters[0m
+  --bactopia                          [2m[string]  [0mThe path to bactopia results to use as inputs[2m[0m
+  --eggnog_db                         [2m[string]  [0mTarball or path to eggNOG databases[2m[0m
+
+-[2m------------------------------------------------------------------[0m-
+Dec-17 20:28:10.907 [main] ERROR nextflow.Nextflow - ERROR: Validation of pipeline parameters failed!
+Please correct to continue

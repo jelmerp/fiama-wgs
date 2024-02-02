@@ -1,0 +1,847 @@
+Dec-17 20:31:01.045 [main] DEBUG nextflow.cli.Launcher - $> nextflow run /fs/project/PAS0471/jelmer/conda/bactopia3//share/bactopia-3.0.0/main.nf --wf gtdb --bactopia /fs/ess/PAS0471/jelmer/assist/2023-12_fiama/results/bactopia --outdir /fs/ess/PAS0471/jelmer/assist/2023-12_fiama/results/bactopia --run_name bactopia --singularity_cache /fs/project/PAS0471/containers --max_cpus 48 --max_time 1440 --max_memory 128 --max_retry 1 -qs 100 -w /fs/scratch/PAS0471/jelmer/bactopia -profile singularity -resume -c /fs/ess/PAS0471/jelmer/assist/2023-12_fiama/results/bactopia/osc.config -ansi-log false --gtdb /fs/ess/PAS0471/jelmer/refdata/gtdb/release214
+Dec-17 20:31:01.134 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 23.10.0
+Dec-17 20:31:01.160 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/users/PAS0471/jelmer/.nextflow/plugins; core-plugins: nf-amazon@2.1.4,nf-azure@1.3.2,nf-cloudcache@0.3.0,nf-codecommit@0.1.5,nf-console@1.0.6,nf-ga4gh@1.1.0,nf-google@1.8.3,nf-tower@1.6.3,nf-wave@1.0.0
+Dec-17 20:31:01.169 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Dec-17 20:31:01.170 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Dec-17 20:31:01.172 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
+Dec-17 20:31:01.181 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Dec-17 20:31:01.194 [main] DEBUG nextflow.config.ConfigBuilder - Found config base: /fs/project/PAS0471/jelmer/conda/bactopia3/share/bactopia-3.0.0/nextflow.config
+Dec-17 20:31:01.198 [main] DEBUG nextflow.config.ConfigBuilder - User config file: /fs/ess/PAS0471/jelmer/assist/2023-12_fiama/results/bactopia/osc.config
+Dec-17 20:31:01.199 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /fs/project/PAS0471/jelmer/conda/bactopia3/share/bactopia-3.0.0/nextflow.config
+Dec-17 20:31:01.199 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /fs/ess/PAS0471/jelmer/assist/2023-12_fiama/results/bactopia/osc.config
+Dec-17 20:31:01.222 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `singularity`
+Dec-17 20:31:02.525 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `singularity`
+Dec-17 20:31:02.560 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [standard, test, wsvl, local, docker, sge, slurm, gcp, mamba, conda, singularity, aws, arcc, arm]
+Dec-17 20:31:02.593 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 from script declararion
+Dec-17 20:31:02.607 [main] INFO  nextflow.cli.CmdRun - Launching `/fs/project/PAS0471/jelmer/conda/bactopia3/share/bactopia-3.0.0/main.nf` [fervent_kilby] DSL2 - revision: 0cd9f79ba7
+Dec-17 20:31:02.608 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Dec-17 20:31:02.608 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
+Dec-17 20:31:02.615 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /users/PAS0471/jelmer/.nextflow/secrets/store.json
+Dec-17 20:31:02.618 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@902fdbe] - activable => nextflow.secret.LocalSecretsProvider@902fdbe
+Dec-17 20:31:02.663 [main] DEBUG nextflow.Session - Session UUID: e630ee52-ec74-4b58-b7dc-eebc58273c71
+Dec-17 20:31:02.663 [main] DEBUG nextflow.Session - Run name: fervent_kilby
+Dec-17 20:31:02.664 [main] DEBUG nextflow.Session - Executor pool size: 10
+Dec-17 20:31:02.669 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
+Dec-17 20:31:02.696 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 23.10.0 build 5889
+  Created: 15-10-2023 15:07 UTC (11:07 EDT)
+  System: Linux 3.10.0-1160.95.1.el7.x86_64
+  Runtime: Groovy 3.0.19 on OpenJDK 64-Bit Server VM 21-internal-adhoc.conda.src
+  Encoding: UTF-8 (UTF-8)
+  Process: 41652@p0076.ten.osc.edu [10.4.2.19]
+  CPUs: 10 - Mem: 40 GB (39.6 GB) - Swap: 0 (0) - Virtual threads ON
+Dec-17 20:31:02.746 [main] DEBUG nextflow.Session - Work-dir: /fs/scratch/PAS0471/jelmer/bactopia [gpfs]
+Dec-17 20:31:02.776 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Dec-17 20:31:02.787 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Dec-17 20:31:02.835 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Dec-17 20:31:02.841 [main] DEBUG nextflow.util.CustomPoolFactory - Creating virtual thread pool
+Dec-17 20:31:03.037 [main] DEBUG nextflow.Session - Session start
+Dec-17 20:31:03.048 [main] DEBUG nextflow.trace.TraceFileObserver - Workflow started -- trace file: /fs/ess/PAS0471/jelmer/assist/2023-12_fiama/results/bactopia/bactopia-runs/gtdb-20231217-203102/nf-reports/gtdb-trace.txt
+Dec-17 20:31:03.062 [main] DEBUG nextflow.Session - Using default localLib path: /fs/project/PAS0471/jelmer/conda/bactopia3/share/bactopia-3.0.0/lib
+Dec-17 20:31:03.074 [main] DEBUG nextflow.Session - Adding to the classpath library: /fs/project/PAS0471/jelmer/conda/bactopia3/share/bactopia-3.0.0/lib
+Dec-17 20:31:03.075 [main] DEBUG nextflow.Session - Adding to the classpath library: /fs/project/PAS0471/jelmer/conda/bactopia3/share/bactopia-3.0.0/lib/nfcore_external_java_deps.jar
+Dec-17 20:31:03.235 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Dec-17 20:31:04.664 [main] WARN  nextflow.Nextflow - Maximum memory (128) was adjusted to fit your system (40)
+Dec-17 20:31:04.667 [main] WARN  nextflow.Nextflow - Maximum CPUs (48) was adjusted to fit your system (10)
+Dec-17 20:31:04.837 [main] INFO  nextflow.Nextflow - 
+
+-[2m------------------------------------------------------------------[0m-
+[0;34m   _                _              _         _              _              [0m
+[0;34m  | |__   __ _  ___| |_ ___  _ __ (_) __ _  | |_ ___   ___ | |___          [0m
+[0;34m  | '_ \ / _` |/ __| __/ _ \| '_ \| |/ _` | | __/ _ \ / _ \| / __|    [0m
+[0;34m  | |_) | (_| | (__| || (_) | |_) | | (_| | | || (_) | (_) | \__ \        [0m
+[0;34m  |_.__/ \__,_|\___|\__\___/| .__/|_|\__,_|  \__\___/ \___/|_|___/ [0m
+[0;34m                            |_|                                            [0m
+[0;36m  bactopia tools gtdb v3.0.0[0m
+[0;36m  Identify marker genes and assign taxonomic classifications [0m
+-[2m------------------------------------------------------------------[0m-
+[1mCore Nextflow options[0m
+  [0;34mrunName          : [0;32mfervent_kilby[0m
+  [0;34mcontainerEngine  : [0;32msingularity[0m
+  [0;34mcontainer        : [0;32mquay.io/bactopia/bactopia:3.0.0[0m
+  [0;34mlaunchDir        : [0;32m/fs/ess/PAS0471/jelmer/assist/2023-12_fiama/bacsub/gtdb[0m
+  [0;34mworkDir          : [0;32m/fs/scratch/PAS0471/jelmer/bactopia[0m
+  [0;34mprojectDir       : [0;32m/fs/project/PAS0471/jelmer/conda/bactopia3/share/bactopia-3.0.0[0m
+  [0;34muserName         : [0;32mjelmer[0m
+  [0;34mprofile          : [0;32msingularity[0m
+  [0;34mconfigFiles      : [0;32m/fs/project/PAS0471/jelmer/conda/bactopia3/share/bactopia-3.0.0/nextflow.config, /fs/ess/PAS0471/jelmer/assist/2023-12_fiama/results/bactopia/osc.config[0m
+
+[1mRequired Parameters[0m
+  [0;34mbactopia         : [0;32m/fs/ess/PAS0471/jelmer/assist/2023-12_fiama/results/bactopia[0m
+
+[1mGTDB Setup Parameters[0m
+  [0;34mgtdb             : [0;32m/fs/ess/PAS0471/jelmer/refdata/gtdb/release214[0m
+
+[1mOptional Parameters[0m
+  [0;34moutdir           : [0;32m/fs/ess/PAS0471/jelmer/assist/2023-12_fiama/results/bactopia[0m
+
+[1mMax Job Request Parameters[0m
+  [0;34mmax_retry        : [0;32m1[0m
+  [0;34mmax_cpus         : [0;32m48[0m
+  [0;34mmax_memory       : [0;32m128[0m
+  [0;34mmax_time         : [0;32m1440[0m
+
+[1mNextflow Profile Parameters[0m
+  [0;34mcondadir         : [0;32m/users/PAS0471/jelmer/.bactopia/conda[0m
+  [0;34mdatasets_cache   : [0;32m/users/PAS0471/jelmer/.bactopia/datasets[0m
+  [0;34msingularity_cache: [0;32m/fs/project/PAS0471/containers[0m
+
+[1mHelpful Parameters[0m
+  [0;34mwf               : [0;32mgtdb[0m
+
+!! Only displaying parameters that differ from the pipeline defaults !!
+-[2m------------------------------------------------------------------[0m-
+If you use bactopia for your analysis please cite:
+
+* Bactopia
+  https://doi.org/10.1128/mSystems.00190-20
+
+* The nf-core framework
+  https://doi.org/10.1038/s41587-020-0439-x
+
+* Software dependencies
+  https://bactopia.github.io/acknowledgements/
+-[2m------------------------------------------------------------------[0m-
+Dec-17 20:31:05.104 [main] WARN  nextflow.Nextflow - Maximum memory (128) was adjusted to fit your system (40)
+Dec-17 20:31:05.104 [main] WARN  nextflow.Nextflow - Maximum CPUs (48) was adjusted to fit your system (10)
+Dec-17 20:31:05.252 [main] WARN  nextflow.Nextflow - Maximum memory (128) was adjusted to fit your system (40)
+Dec-17 20:31:05.253 [main] WARN  nextflow.Nextflow - Maximum CPUs (48) was adjusted to fit your system (10)
+Dec-17 20:31:05.375 [main] WARN  nextflow.Nextflow - Maximum memory (128) was adjusted to fit your system (40)
+Dec-17 20:31:05.376 [main] WARN  nextflow.Nextflow - Maximum CPUs (48) was adjusted to fit your system (10)
+Dec-17 20:31:05.478 [main] WARN  nextflow.Nextflow - Maximum memory (128) was adjusted to fit your system (40)
+Dec-17 20:31:05.479 [main] WARN  nextflow.Nextflow - Maximum CPUs (48) was adjusted to fit your system (10)
+Dec-17 20:31:05.486 [main] INFO  nextflow.Nextflow - 
+Each task will use 10 CPUs out of the available 10 CPUs. At most 
+1 task(s) will be run at a time, this can affect the efficiency 
+of Bactopia. You can use the '-qs' parameter to alter the number of 
+tasks to run at a time (e.g. '-qs 2', means only 2 tasks or a maximum 
+of 20 CPUs will be used at once)
+
+Dec-17 20:31:05.486 [main] INFO  nextflow.Nextflow - 
+Dec-17 20:31:05.696 [main] INFO  nextflow.Nextflow - Found 72 samples to process
+Dec-17 20:31:05.696 [main] INFO  nextflow.Nextflow - 3 samples were excluded due to missing files. They are:
+Dec-17 20:31:05.696 [main] INFO  nextflow.Nextflow -     logs
+Dec-17 20:31:05.696 [main] INFO  nextflow.Nextflow -     asm_files
+Dec-17 20:31:05.696 [main] INFO  nextflow.Nextflow -     NCL
+Dec-17 20:31:05.696 [main] INFO  nextflow.Nextflow - 
+If this looks wrong, now's your chance to back out (CTRL+C 3 times).
+Dec-17 20:31:05.696 [main] INFO  nextflow.Nextflow - Sleeping for 5 seconds...
+Dec-17 20:31:05.696 [main] INFO  nextflow.Nextflow - --------------------------------------------------------------------
+Dec-17 20:31:10.848 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_high` matches labels `process_high` for process with name BACTOPIATOOLS:GTDB:CLASSIFY
+Dec-17 20:31:10.856 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Dec-17 20:31:10.856 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Dec-17 20:31:10.865 [main] DEBUG nextflow.executor.Executor - [warm up] executor > slurm
+Dec-17 20:31:10.871 [main] DEBUG n.processor.TaskPollingMonitor - Creating task monitor for executor 'slurm' > capacity: 100; pollInterval: 5s; dumpInterval: 5m 
+Dec-17 20:31:10.873 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: slurm)
+Dec-17 20:31:10.874 [main] DEBUG n.executor.AbstractGridExecutor - Creating executor 'slurm' > queue-stat-interval: 1m
+Dec-17 20:31:11.002 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low` for process with name BACTOPIATOOLS:GTDB:CSVTK_CONCAT
+Dec-17 20:31:11.004 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Dec-17 20:31:11.004 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Dec-17 20:31:11.055 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low` for process with name BACTOPIATOOLS:CUSTOM_DUMPSOFTWAREVERSIONS
+Dec-17 20:31:11.055 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Dec-17 20:31:11.056 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Dec-17 20:31:11.058 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: SETUPDB, BACTOPIATOOLS:GTDB:CLASSIFY, CSVTK_CONCAT, GTDBTK_SETUPDB, CUSTOM_DUMPSOFTWAREVERSIONS, GTDBTK_CLASSIFYWF, BACTOPIATOOLS:GTDB:CSVTK_CONCAT, BACTOPIATOOLS:CUSTOM_DUMPSOFTWAREVERSIONS, CLASSIFY
+Dec-17 20:31:11.060 [main] DEBUG nextflow.Session - Igniting dataflow network (9)
+Dec-17 20:31:11.063 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > BACTOPIATOOLS:GTDB:CLASSIFY
+Dec-17 20:31:11.068 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > BACTOPIATOOLS:GTDB:CSVTK_CONCAT
+Dec-17 20:31:11.068 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > BACTOPIATOOLS:CUSTOM_DUMPSOFTWAREVERSIONS
+Dec-17 20:31:11.069 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
+  Script_fc43e2db730cad08: /fs/project/PAS0471/jelmer/conda/bactopia3/share/bactopia-3.0.0/./workflows/../lib/nf/bactopia_tools.nf
+  Script_26d363606f94d836: /fs/project/PAS0471/jelmer/conda/bactopia3/share/bactopia-3.0.0/./workflows/../modules/nf-core/custom/dumpsoftwareversions/main.nf
+  Script_6ffa8c5ec53b2617: /fs/project/PAS0471/jelmer/conda/bactopia3/share/bactopia-3.0.0/./workflows/../modules/nf-core/custom/dumpsoftwareversions/../../../../lib/nf/functions.nf
+  Script_d282f956d8c4ed22: /fs/project/PAS0471/jelmer/conda/bactopia3/share/bactopia-3.0.0/./workflows/bactopia-tools.nf
+  Script_28b956a88b5bebd6: /fs/project/PAS0471/jelmer/conda/bactopia3/share/bactopia-3.0.0/main.nf
+  Script_7a6d8b04f0741e29: /fs/project/PAS0471/jelmer/conda/bactopia3/share/bactopia-3.0.0/./workflows/../subworkflows/local/gtdb/../../../modules/nf-core/gtdbtk/classifywf/main.nf
+  Script_6c04dfea1b61316e: /fs/project/PAS0471/jelmer/conda/bactopia3/share/bactopia-3.0.0/./workflows/../subworkflows/local/gtdb/../../../modules/nf-core/csvtk/concat/main.nf
+  Script_27e702ba8df33c9f: /fs/project/PAS0471/jelmer/conda/bactopia3/share/bactopia-3.0.0/./workflows/../subworkflows/local/gtdb/main.nf
+  Script_acb991d52ec0a396: /fs/project/PAS0471/jelmer/conda/bactopia3/share/bactopia-3.0.0/./workflows/../subworkflows/local/gtdb/../../../modules/nf-core/gtdbtk/setupdb/main.nf
+Dec-17 20:31:11.069 [main] DEBUG nextflow.script.ScriptRunner - > Awaiting termination 
+Dec-17 20:31:11.069 [main] DEBUG nextflow.Session - Session await
+Dec-17 20:31:11.150 [Actor Thread 45] DEBUG nextflow.container.SingularityCache - Singularity found local store for image=https://depot.galaxyproject.org/singularity/gtdbtk:2.3.2--pyhdfd78af_0; path=/fs/project/PAS0471/containers/depot.galaxyproject.org-singularity-gtdbtk-2.3.2--pyhdfd78af_0.img
+Dec-17 20:31:11.417 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG46) > jobId: 25225216; workDir: /fs/scratch/PAS0471/jelmer/bactopia/20/604c6981c900b4f10a73695f009ad4
+Dec-17 20:31:11.418 [Task submitter] INFO  nextflow.Session - [20/604c69] Submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG46)
+Dec-17 20:31:11.629 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG86) > jobId: 25225217; workDir: /fs/scratch/PAS0471/jelmer/bactopia/cb/ac128798c8d7792a647dba88604354
+Dec-17 20:31:11.630 [Task submitter] INFO  nextflow.Session - [cb/ac1287] Submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG86)
+Dec-17 20:31:11.831 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG128) > jobId: 25225218; workDir: /fs/scratch/PAS0471/jelmer/bactopia/fb/683b0fdb367a72be470c71fb221c70
+Dec-17 20:31:11.831 [Task submitter] INFO  nextflow.Session - [fb/683b0f] Submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG128)
+Dec-17 20:31:12.031 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG2) > jobId: 25225219; workDir: /fs/scratch/PAS0471/jelmer/bactopia/54/bdf43f5599d31a425a2a591318eb5a
+Dec-17 20:31:12.032 [Task submitter] INFO  nextflow.Session - [54/bdf43f] Submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG2)
+Dec-17 20:31:12.239 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG6) > jobId: 25225220; workDir: /fs/scratch/PAS0471/jelmer/bactopia/5d/1f975c31d383db2b4ed34ec2e5c8fe
+Dec-17 20:31:12.241 [Task submitter] INFO  nextflow.Session - [5d/1f975c] Submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG6)
+Dec-17 20:31:12.447 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG45) > jobId: 25225221; workDir: /fs/scratch/PAS0471/jelmer/bactopia/c6/5a5cad8c92f4cf153f27b841f99076
+Dec-17 20:31:12.448 [Task submitter] INFO  nextflow.Session - [c6/5a5cad] Submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG45)
+Dec-17 20:31:12.584 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG42Y) > jobId: 25225222; workDir: /fs/scratch/PAS0471/jelmer/bactopia/e2/76f3b60bcea68d90b2dadad302802b
+Dec-17 20:31:12.585 [Task submitter] INFO  nextflow.Session - [e2/76f3b6] Submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG42Y)
+Dec-17 20:31:12.717 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG153) > jobId: 25225223; workDir: /fs/scratch/PAS0471/jelmer/bactopia/b1/400ecf1b98d03cc7ce1b1709c7eadf
+Dec-17 20:31:12.717 [Task submitter] INFO  nextflow.Session - [b1/400ecf] Submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG153)
+Dec-17 20:31:12.849 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG85) > jobId: 25225224; workDir: /fs/scratch/PAS0471/jelmer/bactopia/4f/c5335e9a1e9f04437b343b568d881b
+Dec-17 20:31:12.850 [Task submitter] INFO  nextflow.Session - [4f/c5335e] Submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG85)
+Dec-17 20:31:13.051 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG115) > jobId: 25225225; workDir: /fs/scratch/PAS0471/jelmer/bactopia/53/f154975a3d70b93c222f5711782933
+Dec-17 20:31:13.052 [Task submitter] INFO  nextflow.Session - [53/f15497] Submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG115)
+Dec-17 20:31:13.260 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG138) > jobId: 25225226; workDir: /fs/scratch/PAS0471/jelmer/bactopia/64/430af6850bc49ba90d1d7cea5fded7
+Dec-17 20:31:13.261 [Task submitter] INFO  nextflow.Session - [64/430af6] Submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG138)
+Dec-17 20:31:13.392 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG158) > jobId: 25225227; workDir: /fs/scratch/PAS0471/jelmer/bactopia/b1/023c6918009dc12dd66788c21943d3
+Dec-17 20:31:13.393 [Task submitter] INFO  nextflow.Session - [b1/023c69] Submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG158)
+Dec-17 20:31:13.519 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG148) > jobId: 25225228; workDir: /fs/scratch/PAS0471/jelmer/bactopia/28/95b3ab3f0c686d0f9090f4f5272b9d
+Dec-17 20:31:13.520 [Task submitter] INFO  nextflow.Session - [28/95b3ab] Submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG148)
+Dec-17 20:31:13.652 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG156) > jobId: 25225229; workDir: /fs/scratch/PAS0471/jelmer/bactopia/d0/b89ec3bc24cc09f104e417d37c63af
+Dec-17 20:31:13.652 [Task submitter] INFO  nextflow.Session - [d0/b89ec3] Submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG156)
+Dec-17 20:31:13.834 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG87) > jobId: 25225231; workDir: /fs/scratch/PAS0471/jelmer/bactopia/3e/881a610c77f28ee91b0e746a8a18ed
+Dec-17 20:31:13.834 [Task submitter] INFO  nextflow.Session - [3e/881a61] Submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG87)
+Dec-17 20:31:13.966 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG47) > jobId: 25225232; workDir: /fs/scratch/PAS0471/jelmer/bactopia/7e/2d6624e898f8a9e8906de73f211a65
+Dec-17 20:31:13.966 [Task submitter] INFO  nextflow.Session - [7e/2d6624] Submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG47)
+Dec-17 20:31:14.095 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG48) > jobId: 25225233; workDir: /fs/scratch/PAS0471/jelmer/bactopia/6f/58b7f69290e8deed18d614365591d0
+Dec-17 20:31:14.095 [Task submitter] INFO  nextflow.Session - [6f/58b7f6] Submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG48)
+Dec-17 20:31:14.228 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG94) > jobId: 25225234; workDir: /fs/scratch/PAS0471/jelmer/bactopia/b2/07eaa96a5dc8e98e416278485c3d2a
+Dec-17 20:31:14.229 [Task submitter] INFO  nextflow.Session - [b2/07eaa9] Submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG94)
+Dec-17 20:31:14.362 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG95) > jobId: 25225235; workDir: /fs/scratch/PAS0471/jelmer/bactopia/fa/9982d24e731a1d9a6e1faf33a2e1bf
+Dec-17 20:31:14.362 [Task submitter] INFO  nextflow.Session - [fa/9982d2] Submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG95)
+Dec-17 20:31:14.558 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG121) > jobId: 25225236; workDir: /fs/scratch/PAS0471/jelmer/bactopia/9c/651e6f527c0333510bdfabd025ab3a
+Dec-17 20:31:14.558 [Task submitter] INFO  nextflow.Session - [9c/651e6f] Submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG121)
+Dec-17 20:31:14.686 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG100) > jobId: 25225237; workDir: /fs/scratch/PAS0471/jelmer/bactopia/b2/caeffcfe39c1f8cba13b0f73753c1b
+Dec-17 20:31:14.687 [Task submitter] INFO  nextflow.Session - [b2/caeffc] Submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG100)
+Dec-17 20:31:14.815 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG34) > jobId: 25225238; workDir: /fs/scratch/PAS0471/jelmer/bactopia/2a/702f1d7a67076f80a37c1c725958ab
+Dec-17 20:31:14.816 [Task submitter] INFO  nextflow.Session - [2a/702f1d] Submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG34)
+Dec-17 20:31:14.945 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG137) > jobId: 25225239; workDir: /fs/scratch/PAS0471/jelmer/bactopia/c6/d5208e2068f5b54ba099be1c4f0869
+Dec-17 20:31:14.946 [Task submitter] INFO  nextflow.Session - [c6/d5208e] Submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG137)
+Dec-17 20:31:15.074 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG96) > jobId: 25225240; workDir: /fs/scratch/PAS0471/jelmer/bactopia/d6/777a715c253452f033601cf007dd21
+Dec-17 20:31:15.075 [Task submitter] INFO  nextflow.Session - [d6/777a71] Submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG96)
+Dec-17 20:31:15.207 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG7) > jobId: 25225241; workDir: /fs/scratch/PAS0471/jelmer/bactopia/05/13073016da2451a54cb515237ab56d
+Dec-17 20:31:15.208 [Task submitter] INFO  nextflow.Session - [05/130730] Submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG7)
+Dec-17 20:31:15.335 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG56) > jobId: 25225242; workDir: /fs/scratch/PAS0471/jelmer/bactopia/8f/23ada33bf9ea76e67c9137f5b66932
+Dec-17 20:31:15.335 [Task submitter] INFO  nextflow.Session - [8f/23ada3] Submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG56)
+Dec-17 20:31:15.466 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG97) > jobId: 25225243; workDir: /fs/scratch/PAS0471/jelmer/bactopia/6f/77e82c21e658a661b66698c629d4e2
+Dec-17 20:31:15.466 [Task submitter] INFO  nextflow.Session - [6f/77e82c] Submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG97)
+Dec-17 20:31:15.595 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG114) > jobId: 25225244; workDir: /fs/scratch/PAS0471/jelmer/bactopia/39/a486346a8818bbeab30fb8637719d6
+Dec-17 20:31:15.595 [Task submitter] INFO  nextflow.Session - [39/a48634] Submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG114)
+Dec-17 20:31:15.727 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG139) > jobId: 25225245; workDir: /fs/scratch/PAS0471/jelmer/bactopia/d0/41931a1bdde87732c242ac59573edd
+Dec-17 20:31:15.727 [Task submitter] INFO  nextflow.Session - [d0/41931a] Submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG139)
+Dec-17 20:31:15.926 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG43) > jobId: 25225246; workDir: /fs/scratch/PAS0471/jelmer/bactopia/22/a52bbd2c8e54af0cb6612b5aaff35e
+Dec-17 20:31:15.927 [Task submitter] INFO  nextflow.Session - [22/a52bbd] Submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG43)
+Dec-17 20:31:16.123 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG90) > jobId: 25225247; workDir: /fs/scratch/PAS0471/jelmer/bactopia/6c/52b148981dff019f07b69a507ec70b
+Dec-17 20:31:16.124 [Task submitter] INFO  nextflow.Session - [6c/52b148] Submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG90)
+Dec-17 20:31:16.263 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG58) > jobId: 25225248; workDir: /fs/scratch/PAS0471/jelmer/bactopia/84/88bc08d14486382b898e5798710968
+Dec-17 20:31:16.263 [Task submitter] INFO  nextflow.Session - [84/88bc08] Submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG58)
+Dec-17 20:31:16.483 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG59) > jobId: 25225249; workDir: /fs/scratch/PAS0471/jelmer/bactopia/8f/3091a19c6f5c196a281508528ea892
+Dec-17 20:31:16.483 [Task submitter] INFO  nextflow.Session - [8f/3091a1] Submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG59)
+Dec-17 20:31:16.691 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG18) > jobId: 25225250; workDir: /fs/scratch/PAS0471/jelmer/bactopia/bd/5b6ddc33230c941d33c824f6c24a0c
+Dec-17 20:31:16.692 [Task submitter] INFO  nextflow.Session - [bd/5b6ddc] Submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG18)
+Dec-17 20:31:16.897 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG102) > jobId: 25225251; workDir: /fs/scratch/PAS0471/jelmer/bactopia/7e/ad1a02a7e423b076e8fc7d5fa1335b
+Dec-17 20:31:16.897 [Task submitter] INFO  nextflow.Session - [7e/ad1a02] Submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG102)
+Dec-17 20:31:17.102 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG103) > jobId: 25225252; workDir: /fs/scratch/PAS0471/jelmer/bactopia/39/aae42ea5aba5c2f091755b32815950
+Dec-17 20:31:17.103 [Task submitter] INFO  nextflow.Session - [39/aae42e] Submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG103)
+Dec-17 20:31:17.315 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG8) > jobId: 25225253; workDir: /fs/scratch/PAS0471/jelmer/bactopia/e6/d85f1f1ae564c2ef48cb02b4a8474e
+Dec-17 20:31:17.315 [Task submitter] INFO  nextflow.Session - [e6/d85f1f] Submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG8)
+Dec-17 20:31:17.453 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG52) > jobId: 25225254; workDir: /fs/scratch/PAS0471/jelmer/bactopia/e8/bcc997962ebcc1662221feff01bd11
+Dec-17 20:31:17.454 [Task submitter] INFO  nextflow.Session - [e8/bcc997] Submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG52)
+Dec-17 20:31:17.585 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG19) > jobId: 25225255; workDir: /fs/scratch/PAS0471/jelmer/bactopia/88/219a8f6dbef1ea6063e3da0b932fa9
+Dec-17 20:31:17.585 [Task submitter] INFO  nextflow.Session - [88/219a8f] Submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG19)
+Dec-17 20:31:17.717 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG69) > jobId: 25225256; workDir: /fs/scratch/PAS0471/jelmer/bactopia/fa/9cfbc499efb707485f0326d6b3a731
+Dec-17 20:31:17.717 [Task submitter] INFO  nextflow.Session - [fa/9cfbc4] Submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG69)
+Dec-17 20:31:17.847 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG68) > jobId: 25225257; workDir: /fs/scratch/PAS0471/jelmer/bactopia/f5/730e59f904631b9489ea07bf407516
+Dec-17 20:31:17.847 [Task submitter] INFO  nextflow.Session - [f5/730e59] Submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG68)
+Dec-17 20:31:17.977 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG15) > jobId: 25225258; workDir: /fs/scratch/PAS0471/jelmer/bactopia/8c/0b4e74723b96ff2c8ced26abbec705
+Dec-17 20:31:17.977 [Task submitter] INFO  nextflow.Session - [8c/0b4e74] Submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG15)
+Dec-17 20:31:18.159 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG14) > jobId: 25225259; workDir: /fs/scratch/PAS0471/jelmer/bactopia/ca/d3516b680d7587a9d2148d5146c663
+Dec-17 20:31:18.159 [Task submitter] INFO  nextflow.Session - [ca/d3516b] Submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG14)
+Dec-17 20:31:18.293 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG40) > jobId: 25225261; workDir: /fs/scratch/PAS0471/jelmer/bactopia/39/4f95c87bdd61c9f330041ca2b864f6
+Dec-17 20:31:18.294 [Task submitter] INFO  nextflow.Session - [39/4f95c8] Submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG40)
+Dec-17 20:31:18.424 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG9) > jobId: 25225262; workDir: /fs/scratch/PAS0471/jelmer/bactopia/63/625026d090722462f04ca7addb2cc9
+Dec-17 20:31:18.425 [Task submitter] INFO  nextflow.Session - [63/625026] Submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG9)
+Dec-17 20:31:18.553 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG29) > jobId: 25225263; workDir: /fs/scratch/PAS0471/jelmer/bactopia/e0/75f177ce2d5fe499213565c05e4343
+Dec-17 20:31:18.553 [Task submitter] INFO  nextflow.Session - [e0/75f177] Submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG29)
+Dec-17 20:31:18.725 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG42W) > jobId: 25225264; workDir: /fs/scratch/PAS0471/jelmer/bactopia/b7/71f0db82b5028a29aa9f54da27d8ab
+Dec-17 20:31:18.725 [Task submitter] INFO  nextflow.Session - [b7/71f0db] Submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG42W)
+Dec-17 20:31:18.923 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG16) > jobId: 25225265; workDir: /fs/scratch/PAS0471/jelmer/bactopia/df/244ba5dbc49fd05a2001ee28ceb771
+Dec-17 20:31:18.924 [Task submitter] INFO  nextflow.Session - [df/244ba5] Submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG16)
+Dec-17 20:31:19.061 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG3) > jobId: 25225266; workDir: /fs/scratch/PAS0471/jelmer/bactopia/21/33eccf9fa35968676030f60b4f1845
+Dec-17 20:31:19.062 [Task submitter] INFO  nextflow.Session - [21/33eccf] Submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG3)
+Dec-17 20:31:19.235 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG63) > jobId: 25225268; workDir: /fs/scratch/PAS0471/jelmer/bactopia/e4/3843edce2c4ba7744cb4d7edcdd63f
+Dec-17 20:31:19.235 [Task submitter] INFO  nextflow.Session - [e4/3843ed] Submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG63)
+Dec-17 20:31:19.368 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG77) > jobId: 25225269; workDir: /fs/scratch/PAS0471/jelmer/bactopia/d1/f125fd0b68e0098df52ca3f34d506c
+Dec-17 20:31:19.369 [Task submitter] INFO  nextflow.Session - [d1/f125fd] Submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG77)
+Dec-17 20:31:19.500 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG24) > jobId: 25225270; workDir: /fs/scratch/PAS0471/jelmer/bactopia/55/dbd7d1f8cd19ff69f4bae96039b929
+Dec-17 20:31:19.500 [Task submitter] INFO  nextflow.Session - [55/dbd7d1] Submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG24)
+Dec-17 20:31:19.700 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG39) > jobId: 25225271; workDir: /fs/scratch/PAS0471/jelmer/bactopia/60/20911fbe4e5d17aee20babba40c0ca
+Dec-17 20:31:19.700 [Task submitter] INFO  nextflow.Session - [60/20911f] Submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG39)
+Dec-17 20:31:19.862 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG65) > jobId: 25225272; workDir: /fs/scratch/PAS0471/jelmer/bactopia/0b/2c2bb6dc27b40e7c58579b873903dd
+Dec-17 20:31:19.862 [Task submitter] INFO  nextflow.Session - [0b/2c2bb6] Submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG65)
+Dec-17 20:31:19.993 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG25) > jobId: 25225273; workDir: /fs/scratch/PAS0471/jelmer/bactopia/78/801438c5f517150f2a19ac98f1be9a
+Dec-17 20:31:19.993 [Task submitter] INFO  nextflow.Session - [78/801438] Submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG25)
+Dec-17 20:31:20.196 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG154) > jobId: 25225274; workDir: /fs/scratch/PAS0471/jelmer/bactopia/b9/68e26f80801d536464cf72cbfb044b
+Dec-17 20:31:20.196 [Task submitter] INFO  nextflow.Session - [b9/68e26f] Submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG154)
+Dec-17 20:31:20.409 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG152) > jobId: 25225275; workDir: /fs/scratch/PAS0471/jelmer/bactopia/4b/d014fec570fb98719b5bbe0de2b18e
+Dec-17 20:31:20.409 [Task submitter] INFO  nextflow.Session - [4b/d014fe] Submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG152)
+Dec-17 20:31:20.548 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG11) > jobId: 25225276; workDir: /fs/scratch/PAS0471/jelmer/bactopia/34/e5821f00250bb3df58c20041da03e4
+Dec-17 20:31:20.548 [Task submitter] INFO  nextflow.Session - [34/e5821f] Submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG11)
+Dec-17 20:31:20.679 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG66) > jobId: 25225277; workDir: /fs/scratch/PAS0471/jelmer/bactopia/89/c100b874ff646e68e253aa767cba04
+Dec-17 20:31:20.679 [Task submitter] INFO  nextflow.Session - [89/c100b8] Submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG66)
+Dec-17 20:31:20.851 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG113) > jobId: 25225278; workDir: /fs/scratch/PAS0471/jelmer/bactopia/5d/7d9e223e720197b116cc25834b827f
+Dec-17 20:31:20.852 [Task submitter] INFO  nextflow.Session - [5d/7d9e22] Submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG113)
+Dec-17 20:31:21.744 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG89) > jobId: 25225279; workDir: /fs/scratch/PAS0471/jelmer/bactopia/ea/4da3fee7398747801be73961e3df4e
+Dec-17 20:31:21.745 [Task submitter] INFO  nextflow.Session - [ea/4da3fe] Submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG89)
+Dec-17 20:31:21.915 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG116) > jobId: 25225280; workDir: /fs/scratch/PAS0471/jelmer/bactopia/8a/7f49527c1f5232d9e4dc783ebe85c4
+Dec-17 20:31:21.915 [Task submitter] INFO  nextflow.Session - [8a/7f4952] Submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG116)
+Dec-17 20:31:22.127 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG13) > jobId: 25225281; workDir: /fs/scratch/PAS0471/jelmer/bactopia/fb/f1cdf0802324e6720d9d63b21a197e
+Dec-17 20:31:22.128 [Task submitter] INFO  nextflow.Session - [fb/f1cdf0] Submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG13)
+Dec-17 20:31:22.313 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG60) > jobId: 25225282; workDir: /fs/scratch/PAS0471/jelmer/bactopia/4b/6cf7cd8a12f0979f5bf2b4ce70f9e5
+Dec-17 20:31:22.313 [Task submitter] INFO  nextflow.Session - [4b/6cf7cd] Submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG60)
+Dec-17 20:31:22.517 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG35) > jobId: 25225283; workDir: /fs/scratch/PAS0471/jelmer/bactopia/a4/7efdbac3ad78bbf1ec4538a12b4e9e
+Dec-17 20:31:22.518 [Task submitter] INFO  nextflow.Session - [a4/7efdba] Submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG35)
+Dec-17 20:31:22.707 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG125) > jobId: 25225284; workDir: /fs/scratch/PAS0471/jelmer/bactopia/13/e5e65725f82920cdac082ff25c60a2
+Dec-17 20:31:22.707 [Task submitter] INFO  nextflow.Session - [13/e5e657] Submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG125)
+Dec-17 20:31:22.840 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG21) > jobId: 25225285; workDir: /fs/scratch/PAS0471/jelmer/bactopia/92/359e8e44dabf0eaab75c3353a7ab13
+Dec-17 20:31:22.840 [Task submitter] INFO  nextflow.Session - [92/359e8e] Submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG21)
+Dec-17 20:31:23.029 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG36) > jobId: 25225286; workDir: /fs/scratch/PAS0471/jelmer/bactopia/c5/757d6850aac7ee44a1aeb287eee6c3
+Dec-17 20:31:23.029 [Task submitter] INFO  nextflow.Session - [c5/757d68] Submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG36)
+Dec-17 20:31:23.239 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG98) > jobId: 25225287; workDir: /fs/scratch/PAS0471/jelmer/bactopia/72/66b08fa86232265f0bf6b3907b7927
+Dec-17 20:31:23.239 [Task submitter] INFO  nextflow.Session - [72/66b08f] Submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG98)
+Dec-17 20:31:23.373 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG22) > jobId: 25225288; workDir: /fs/scratch/PAS0471/jelmer/bactopia/b7/5ae4f5bd5e6f8bf7e0fa0d0431ac7c
+Dec-17 20:31:23.373 [Task submitter] INFO  nextflow.Session - [b7/5ae4f5] Submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG22)
+Dec-17 20:31:23.499 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG99) > jobId: 25225289; workDir: /fs/scratch/PAS0471/jelmer/bactopia/7e/e30966a68255edcbaf570d897a3a9f
+Dec-17 20:31:23.500 [Task submitter] INFO  nextflow.Session - [7e/e30966] Submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG99)
+Dec-17 20:31:23.664 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG37) > jobId: 25225290; workDir: /fs/scratch/PAS0471/jelmer/bactopia/52/f64179a1d3dccc734f4ec4b2132467
+Dec-17 20:31:23.665 [Task submitter] INFO  nextflow.Session - [52/f64179] Submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG37)
+Dec-17 20:36:15.911 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor slurm > tasks to be completed: 72 -- submitted tasks are shown below
+~> TaskHandler[jobId: 25225216; id: 9; name: BACTOPIATOOLS:GTDB:CLASSIFY (FG46); status: RUNNING; exit: -; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/20/604c6981c900b4f10a73695f009ad4 started: 1702863085888; exited: -; ]
+~> TaskHandler[jobId: 25225217; id: 7; name: BACTOPIATOOLS:GTDB:CLASSIFY (FG86); status: RUNNING; exit: -; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/cb/ac128798c8d7792a647dba88604354 started: 1702863085893; exited: -; ]
+~> TaskHandler[jobId: 25225218; id: 6; name: BACTOPIATOOLS:GTDB:CLASSIFY (FG128); status: RUNNING; exit: -; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/fb/683b0fdb367a72be470c71fb221c70 started: 1702863085898; exited: -; ]
+~> TaskHandler[jobId: 25225219; id: 10; name: BACTOPIATOOLS:GTDB:CLASSIFY (FG2); status: RUNNING; exit: -; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/54/bdf43f5599d31a425a2a591318eb5a started: 1702863085903; exited: -; ]
+~> TaskHandler[jobId: 25225220; id: 8; name: BACTOPIATOOLS:GTDB:CLASSIFY (FG6); status: RUNNING; exit: -; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/5d/1f975c31d383db2b4ed34ec2e5c8fe started: 1702863085907; exited: -; ]
+~> TaskHandler[jobId: 25225221; id: 2; name: BACTOPIATOOLS:GTDB:CLASSIFY (FG45); status: RUNNING; exit: -; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/c6/5a5cad8c92f4cf153f27b841f99076 started: 1702863085912; exited: -; ]
+~> TaskHandler[jobId: 25225222; id: 3; name: BACTOPIATOOLS:GTDB:CLASSIFY (FG42Y); status: RUNNING; exit: -; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/e2/76f3b60bcea68d90b2dadad302802b started: 1702863085921; exited: -; ]
+~> TaskHandler[jobId: 25225223; id: 4; name: BACTOPIATOOLS:GTDB:CLASSIFY (FG153); status: RUNNING; exit: -; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/b1/400ecf1b98d03cc7ce1b1709c7eadf started: 1702863085925; exited: -; ]
+~> TaskHandler[jobId: 25225224; id: 1; name: BACTOPIATOOLS:GTDB:CLASSIFY (FG85); status: RUNNING; exit: -; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/4f/c5335e9a1e9f04437b343b568d881b started: 1702863085930; exited: -; ]
+~> TaskHandler[jobId: 25225225; id: 5; name: BACTOPIATOOLS:GTDB:CLASSIFY (FG115); status: RUNNING; exit: -; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/53/f154975a3d70b93c222f5711782933 started: 1702863085934; exited: -; ]
+.. remaining tasks omitted.
+Dec-17 20:38:21.132 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 25225222; id: 3; name: BACTOPIATOOLS:GTDB:CLASSIFY (FG42Y); status: COMPLETED; exit: 0; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/e2/76f3b60bcea68d90b2dadad302802b started: 1702863085921; exited: 2023-12-18T01:38:19.940206Z; ]
+Dec-17 20:38:21.303 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process BACTOPIATOOLS:GTDB:CLASSIFY > Skipping output binding because one or more optional files are missing: fileoutparam<2>
+Dec-17 20:39:21.154 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 25225219; id: 10; name: BACTOPIATOOLS:GTDB:CLASSIFY (FG2); status: COMPLETED; exit: 1; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/54/bdf43f5599d31a425a2a591318eb5a started: 1702863085903; exited: 2023-12-18T01:39:20.274204Z; ]
+Dec-17 20:39:21.168 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=BACTOPIATOOLS:GTDB:CLASSIFY (FG2); work-dir=/fs/scratch/PAS0471/jelmer/bactopia/54/bdf43f5599d31a425a2a591318eb5a
+  error [nextflow.exception.ProcessFailedException]: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG2)` terminated with an error exit status (1)
+Dec-17 20:39:21.188 [Task monitor] INFO  nextflow.processor.TaskProcessor - [54/bdf43f] NOTE: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG2)` terminated with an error exit status (1) -- Execution is retried (1)
+Dec-17 20:39:21.203 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 25225227; id: 13; name: BACTOPIATOOLS:GTDB:CLASSIFY (FG158); status: COMPLETED; exit: 1; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/b1/023c6918009dc12dd66788c21943d3 started: 1702863085942; exited: 2023-12-18T01:39:16.399342Z; ]
+Dec-17 20:39:21.203 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=BACTOPIATOOLS:GTDB:CLASSIFY (FG158); work-dir=/fs/scratch/PAS0471/jelmer/bactopia/b1/023c6918009dc12dd66788c21943d3
+  error [nextflow.exception.ProcessFailedException]: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG158)` terminated with an error exit status (1)
+Dec-17 20:39:21.204 [Task monitor] INFO  nextflow.processor.TaskProcessor - [b1/023c69] NOTE: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG158)` terminated with an error exit status (1) -- Execution is retried (1)
+Dec-17 20:39:21.397 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG2) > jobId: 25225423; workDir: /fs/scratch/PAS0471/jelmer/bactopia/b2/220573bd0ef5586efea075fc29b51f
+Dec-17 20:39:21.398 [Task submitter] INFO  nextflow.Session - [b2/220573] Re-submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG2)
+Dec-17 20:39:21.604 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG158) > jobId: 25225424; workDir: /fs/scratch/PAS0471/jelmer/bactopia/2e/d8024c2d4c5de2df950267c2a45b3d
+Dec-17 20:39:21.604 [Task submitter] INFO  nextflow.Session - [2e/d8024c] Re-submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG158)
+Dec-17 20:39:25.938 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 25225265; id: 50; name: BACTOPIATOOLS:GTDB:CLASSIFY (FG16); status: COMPLETED; exit: 1; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/df/244ba5dbc49fd05a2001ee28ceb771 started: 1702863086049; exited: 2023-12-18T01:39:24.085732Z; ]
+Dec-17 20:39:25.938 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=BACTOPIATOOLS:GTDB:CLASSIFY (FG16); work-dir=/fs/scratch/PAS0471/jelmer/bactopia/df/244ba5dbc49fd05a2001ee28ceb771
+  error [nextflow.exception.ProcessFailedException]: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG16)` terminated with an error exit status (1)
+Dec-17 20:39:25.939 [Task monitor] INFO  nextflow.processor.TaskProcessor - [df/244ba5] NOTE: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG16)` terminated with an error exit status (1) -- Execution is retried (1)
+Dec-17 20:39:26.150 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG16) > jobId: 25225425; workDir: /fs/scratch/PAS0471/jelmer/bactopia/9b/e007e41eb075aa8e3a6dd4e12e2a55
+Dec-17 20:39:26.151 [Task submitter] INFO  nextflow.Session - [9b/e007e4] Re-submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG16)
+Dec-17 20:39:30.938 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 25225226; id: 11; name: BACTOPIATOOLS:GTDB:CLASSIFY (FG138); status: COMPLETED; exit: 1; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/64/430af6850bc49ba90d1d7cea5fded7 started: 1702863085938; exited: 2023-12-18T01:39:28.545038Z; ]
+Dec-17 20:39:30.938 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=BACTOPIATOOLS:GTDB:CLASSIFY (FG138); work-dir=/fs/scratch/PAS0471/jelmer/bactopia/64/430af6850bc49ba90d1d7cea5fded7
+  error [nextflow.exception.ProcessFailedException]: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG138)` terminated with an error exit status (1)
+Dec-17 20:39:30.939 [Task monitor] INFO  nextflow.processor.TaskProcessor - [64/430af6] NOTE: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG138)` terminated with an error exit status (1) -- Execution is retried (1)
+Dec-17 20:39:30.953 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 25225266; id: 49; name: BACTOPIATOOLS:GTDB:CLASSIFY (FG3); status: COMPLETED; exit: 1; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/21/33eccf9fa35968676030f60b4f1845 started: 1702863086052; exited: 2023-12-18T01:39:30.703942Z; ]
+Dec-17 20:39:30.953 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=BACTOPIATOOLS:GTDB:CLASSIFY (FG3); work-dir=/fs/scratch/PAS0471/jelmer/bactopia/21/33eccf9fa35968676030f60b4f1845
+  error [nextflow.exception.ProcessFailedException]: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG3)` terminated with an error exit status (1)
+Dec-17 20:39:30.954 [Task monitor] INFO  nextflow.processor.TaskProcessor - [21/33eccf] NOTE: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG3)` terminated with an error exit status (1) -- Execution is retried (1)
+Dec-17 20:39:31.151 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG138) > jobId: 25225426; workDir: /fs/scratch/PAS0471/jelmer/bactopia/dc/5593a1424099a20de94a1f7713922a
+Dec-17 20:39:31.152 [Task submitter] INFO  nextflow.Session - [dc/5593a1] Re-submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG138)
+Dec-17 20:39:31.358 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG3) > jobId: 25225427; workDir: /fs/scratch/PAS0471/jelmer/bactopia/85/c3255304a19ee0ed48de5622301167
+Dec-17 20:39:31.358 [Task submitter] INFO  nextflow.Session - [85/c32553] Re-submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG3)
+Dec-17 20:39:35.938 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 25225218; id: 6; name: BACTOPIATOOLS:GTDB:CLASSIFY (FG128); status: COMPLETED; exit: 1; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/fb/683b0fdb367a72be470c71fb221c70 started: 1702863085898; exited: 2023-12-18T01:39:33.596359Z; ]
+Dec-17 20:39:35.938 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=BACTOPIATOOLS:GTDB:CLASSIFY (FG128); work-dir=/fs/scratch/PAS0471/jelmer/bactopia/fb/683b0fdb367a72be470c71fb221c70
+  error [nextflow.exception.ProcessFailedException]: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG128)` terminated with an error exit status (1)
+Dec-17 20:39:35.939 [Task monitor] INFO  nextflow.processor.TaskProcessor - [fb/683b0f] NOTE: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG128)` terminated with an error exit status (1) -- Execution is retried (1)
+Dec-17 20:39:35.951 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 25225254; id: 38; name: BACTOPIATOOLS:GTDB:CLASSIFY (FG52); status: COMPLETED; exit: 1; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/e8/bcc997962ebcc1662221feff01bd11 started: 1702863086024; exited: 2023-12-18T01:39:34.40476Z; ]
+Dec-17 20:39:35.951 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=BACTOPIATOOLS:GTDB:CLASSIFY (FG52); work-dir=/fs/scratch/PAS0471/jelmer/bactopia/e8/bcc997962ebcc1662221feff01bd11
+  error [nextflow.exception.ProcessFailedException]: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG52)` terminated with an error exit status (1)
+Dec-17 20:39:35.952 [Task monitor] INFO  nextflow.processor.TaskProcessor - [e8/bcc997] NOTE: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG52)` terminated with an error exit status (1) -- Execution is retried (1)
+Dec-17 20:39:35.962 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 25225270; id: 52; name: BACTOPIATOOLS:GTDB:CLASSIFY (FG24); status: COMPLETED; exit: 1; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/55/dbd7d1f8cd19ff69f4bae96039b929 started: 1702863086058; exited: 2023-12-18T01:39:35.419094Z; ]
+Dec-17 20:39:35.963 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=BACTOPIATOOLS:GTDB:CLASSIFY (FG24); work-dir=/fs/scratch/PAS0471/jelmer/bactopia/55/dbd7d1f8cd19ff69f4bae96039b929
+  error [nextflow.exception.ProcessFailedException]: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG24)` terminated with an error exit status (1)
+Dec-17 20:39:35.963 [Task monitor] INFO  nextflow.processor.TaskProcessor - [55/dbd7d1] NOTE: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG24)` terminated with an error exit status (1) -- Execution is retried (1)
+Dec-17 20:39:35.973 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 25225271; id: 53; name: BACTOPIATOOLS:GTDB:CLASSIFY (FG39); status: COMPLETED; exit: 1; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/60/20911fbe4e5d17aee20babba40c0ca started: 1702863086061; exited: 2023-12-18T01:39:31.767606Z; ]
+Dec-17 20:39:35.973 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=BACTOPIATOOLS:GTDB:CLASSIFY (FG39); work-dir=/fs/scratch/PAS0471/jelmer/bactopia/60/20911fbe4e5d17aee20babba40c0ca
+  error [nextflow.exception.ProcessFailedException]: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG39)` terminated with an error exit status (1)
+Dec-17 20:39:35.974 [Task monitor] INFO  nextflow.processor.TaskProcessor - [60/20911f] NOTE: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG39)` terminated with an error exit status (1) -- Execution is retried (1)
+Dec-17 20:39:36.152 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG128) > jobId: 25225428; workDir: /fs/scratch/PAS0471/jelmer/bactopia/11/ae44b01bfff439412540f50d835a71
+Dec-17 20:39:36.152 [Task submitter] INFO  nextflow.Session - [11/ae44b0] Re-submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG128)
+Dec-17 20:39:36.311 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG52) > jobId: 25225429; workDir: /fs/scratch/PAS0471/jelmer/bactopia/2f/8793b14b8585a113fd90f69c2275fd
+Dec-17 20:39:36.311 [Task submitter] INFO  nextflow.Session - [2f/8793b1] Re-submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG52)
+Dec-17 20:39:36.510 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG24) > jobId: 25225430; workDir: /fs/scratch/PAS0471/jelmer/bactopia/49/9f84a58a6501d4241dcb3faac5af2d
+Dec-17 20:39:36.510 [Task submitter] INFO  nextflow.Session - [49/9f84a5] Re-submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG24)
+Dec-17 20:39:36.716 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG39) > jobId: 25225431; workDir: /fs/scratch/PAS0471/jelmer/bactopia/8b/b20ec0a02c203229baa31a2e89506f
+Dec-17 20:39:36.716 [Task submitter] INFO  nextflow.Session - [8b/b20ec0] Re-submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG39)
+Dec-17 20:39:40.938 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 25225236; id: 20; name: BACTOPIATOOLS:GTDB:CLASSIFY (FG121); status: COMPLETED; exit: 1; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/9c/651e6f527c0333510bdfabd025ab3a started: 1702863085969; exited: 2023-12-18T01:39:37.801415Z; ]
+Dec-17 20:39:40.939 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=BACTOPIATOOLS:GTDB:CLASSIFY (FG121); work-dir=/fs/scratch/PAS0471/jelmer/bactopia/9c/651e6f527c0333510bdfabd025ab3a
+  error [nextflow.exception.ProcessFailedException]: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG121)` terminated with an error exit status (1)
+Dec-17 20:39:40.940 [Task monitor] INFO  nextflow.processor.TaskProcessor - [9c/651e6f] NOTE: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG121)` terminated with an error exit status (1) -- Execution is retried (1)
+Dec-17 20:39:40.954 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 25225244; id: 27; name: BACTOPIATOOLS:GTDB:CLASSIFY (FG114); status: COMPLETED; exit: 1; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/39/a486346a8818bbeab30fb8637719d6 started: 1702863085997; exited: 2023-12-18T01:39:40.827917Z; ]
+Dec-17 20:39:40.954 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=BACTOPIATOOLS:GTDB:CLASSIFY (FG114); work-dir=/fs/scratch/PAS0471/jelmer/bactopia/39/a486346a8818bbeab30fb8637719d6
+  error [nextflow.exception.ProcessFailedException]: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG114)` terminated with an error exit status (1)
+Dec-17 20:39:40.955 [Task monitor] INFO  nextflow.processor.TaskProcessor - [39/a48634] NOTE: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG114)` terminated with an error exit status (1) -- Execution is retried (1)
+Dec-17 20:39:40.965 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 25225248; id: 32; name: BACTOPIATOOLS:GTDB:CLASSIFY (FG58); status: COMPLETED; exit: 1; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/84/88bc08d14486382b898e5798710968 started: 1702863086008; exited: 2023-12-18T01:39:40.798024Z; ]
+Dec-17 20:39:40.965 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=BACTOPIATOOLS:GTDB:CLASSIFY (FG58); work-dir=/fs/scratch/PAS0471/jelmer/bactopia/84/88bc08d14486382b898e5798710968
+  error [nextflow.exception.ProcessFailedException]: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG58)` terminated with an error exit status (1)
+Dec-17 20:39:40.966 [Task monitor] INFO  nextflow.processor.TaskProcessor - [84/88bc08] NOTE: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG58)` terminated with an error exit status (1) -- Execution is retried (1)
+Dec-17 20:39:40.976 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 25225251; id: 34; name: BACTOPIATOOLS:GTDB:CLASSIFY (FG102); status: COMPLETED; exit: 1; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/7e/ad1a02a7e423b076e8fc7d5fa1335b started: 1702863086016; exited: 2023-12-18T01:39:37.392502Z; ]
+Dec-17 20:39:40.976 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=BACTOPIATOOLS:GTDB:CLASSIFY (FG102); work-dir=/fs/scratch/PAS0471/jelmer/bactopia/7e/ad1a02a7e423b076e8fc7d5fa1335b
+  error [nextflow.exception.ProcessFailedException]: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG102)` terminated with an error exit status (1)
+Dec-17 20:39:40.977 [Task monitor] INFO  nextflow.processor.TaskProcessor - [7e/ad1a02] NOTE: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG102)` terminated with an error exit status (1) -- Execution is retried (1)
+Dec-17 20:39:40.987 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 25225258; id: 46; name: BACTOPIATOOLS:GTDB:CLASSIFY (FG15); status: COMPLETED; exit: 1; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/8c/0b4e74723b96ff2c8ced26abbec705 started: 1702863086034; exited: 2023-12-18T01:39:36.65028Z; ]
+Dec-17 20:39:40.987 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=BACTOPIATOOLS:GTDB:CLASSIFY (FG15); work-dir=/fs/scratch/PAS0471/jelmer/bactopia/8c/0b4e74723b96ff2c8ced26abbec705
+  error [nextflow.exception.ProcessFailedException]: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG15)` terminated with an error exit status (1)
+Dec-17 20:39:40.987 [Task monitor] INFO  nextflow.processor.TaskProcessor - [8c/0b4e74] NOTE: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG15)` terminated with an error exit status (1) -- Execution is retried (1)
+Dec-17 20:39:41.143 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG121) > jobId: 25225432; workDir: /fs/scratch/PAS0471/jelmer/bactopia/84/1c606b8f0f1e5aaa79ff8cf462f1d1
+Dec-17 20:39:41.143 [Task submitter] INFO  nextflow.Session - [84/1c606b] Re-submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG121)
+Dec-17 20:39:41.350 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG114) > jobId: 25225433; workDir: /fs/scratch/PAS0471/jelmer/bactopia/c3/7d33727514c9b5fd2a0bd5429d877f
+Dec-17 20:39:41.351 [Task submitter] INFO  nextflow.Session - [c3/7d3372] Re-submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG114)
+Dec-17 20:39:41.493 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG58) > jobId: 25225434; workDir: /fs/scratch/PAS0471/jelmer/bactopia/e5/14d1b464094a41060f8776880a4e25
+Dec-17 20:39:41.493 [Task submitter] INFO  nextflow.Session - [e5/14d1b4] Re-submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG58)
+Dec-17 20:39:41.619 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG102) > jobId: 25225435; workDir: /fs/scratch/PAS0471/jelmer/bactopia/90/2ed0b3409e611b9796e6be98347b26
+Dec-17 20:39:41.620 [Task submitter] INFO  nextflow.Session - [90/2ed0b3] Re-submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG102)
+Dec-17 20:39:41.795 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG15) > jobId: 25225436; workDir: /fs/scratch/PAS0471/jelmer/bactopia/67/fd8e9e8c181c59fa7a272033b4ad84
+Dec-17 20:39:41.795 [Task submitter] INFO  nextflow.Session - [67/fd8e9e] Re-submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG15)
+Dec-17 20:39:45.940 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 25225256; id: 42; name: BACTOPIATOOLS:GTDB:CLASSIFY (FG69); status: COMPLETED; exit: 1; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/fa/9cfbc499efb707485f0326d6b3a731 started: 1702863086029; exited: 2023-12-18T01:39:42.190358Z; ]
+Dec-17 20:39:45.941 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=BACTOPIATOOLS:GTDB:CLASSIFY (FG69); work-dir=/fs/scratch/PAS0471/jelmer/bactopia/fa/9cfbc499efb707485f0326d6b3a731
+  error [nextflow.exception.ProcessFailedException]: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG69)` terminated with an error exit status (1)
+Dec-17 20:39:45.941 [Task monitor] INFO  nextflow.processor.TaskProcessor - [fa/9cfbc4] NOTE: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG69)` terminated with an error exit status (1) -- Execution is retried (1)
+Dec-17 20:39:46.150 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG69) > jobId: 25225437; workDir: /fs/scratch/PAS0471/jelmer/bactopia/6c/0c09e14dcbafc5ce14c709e1b4d956
+Dec-17 20:39:46.150 [Task submitter] INFO  nextflow.Session - [6c/0c09e1] Re-submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG69)
+Dec-17 20:39:50.940 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 25225239; id: 23; name: BACTOPIATOOLS:GTDB:CLASSIFY (FG137); status: COMPLETED; exit: 1; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/c6/d5208e2068f5b54ba099be1c4f0869 started: 1702863085979; exited: 2023-12-18T01:39:50.52105Z; ]
+Dec-17 20:39:50.940 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=BACTOPIATOOLS:GTDB:CLASSIFY (FG137); work-dir=/fs/scratch/PAS0471/jelmer/bactopia/c6/d5208e2068f5b54ba099be1c4f0869
+  error [nextflow.exception.ProcessFailedException]: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG137)` terminated with an error exit status (1)
+Dec-17 20:39:50.941 [Task monitor] INFO  nextflow.processor.TaskProcessor - [c6/d5208e] NOTE: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG137)` terminated with an error exit status (1) -- Execution is retried (1)
+Dec-17 20:39:50.953 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 25225247; id: 30; name: BACTOPIATOOLS:GTDB:CLASSIFY (FG90); status: COMPLETED; exit: 1; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/6c/52b148981dff019f07b69a507ec70b started: 1702863086006; exited: 2023-12-18T01:39:46.806381Z; ]
+Dec-17 20:39:50.954 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=BACTOPIATOOLS:GTDB:CLASSIFY (FG90); work-dir=/fs/scratch/PAS0471/jelmer/bactopia/6c/52b148981dff019f07b69a507ec70b
+  error [nextflow.exception.ProcessFailedException]: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG90)` terminated with an error exit status (1)
+Dec-17 20:39:50.954 [Task monitor] INFO  nextflow.processor.TaskProcessor - [6c/52b148] NOTE: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG90)` terminated with an error exit status (1) -- Execution is retried (1)
+Dec-17 20:39:50.966 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 25225250; id: 33; name: BACTOPIATOOLS:GTDB:CLASSIFY (FG18); status: COMPLETED; exit: 1; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/bd/5b6ddc33230c941d33c824f6c24a0c started: 1702863086013; exited: 2023-12-18T01:39:49.50291Z; ]
+Dec-17 20:39:50.966 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=BACTOPIATOOLS:GTDB:CLASSIFY (FG18); work-dir=/fs/scratch/PAS0471/jelmer/bactopia/bd/5b6ddc33230c941d33c824f6c24a0c
+  error [nextflow.exception.ProcessFailedException]: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG18)` terminated with an error exit status (1)
+Dec-17 20:39:50.967 [Task monitor] INFO  nextflow.processor.TaskProcessor - [bd/5b6ddc] NOTE: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG18)` terminated with an error exit status (1) -- Execution is retried (1)
+Dec-17 20:39:50.977 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 25225252; id: 39; name: BACTOPIATOOLS:GTDB:CLASSIFY (FG103); status: COMPLETED; exit: 1; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/39/aae42ea5aba5c2f091755b32815950 started: 1702863086018; exited: 2023-12-18T01:39:49.061851Z; ]
+Dec-17 20:39:50.977 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=BACTOPIATOOLS:GTDB:CLASSIFY (FG103); work-dir=/fs/scratch/PAS0471/jelmer/bactopia/39/aae42ea5aba5c2f091755b32815950
+  error [nextflow.exception.ProcessFailedException]: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG103)` terminated with an error exit status (1)
+Dec-17 20:39:50.978 [Task monitor] INFO  nextflow.processor.TaskProcessor - [39/aae42e] NOTE: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG103)` terminated with an error exit status (1) -- Execution is retried (1)
+Dec-17 20:39:50.988 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 25225253; id: 36; name: BACTOPIATOOLS:GTDB:CLASSIFY (FG8); status: COMPLETED; exit: 1; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/e6/d85f1f1ae564c2ef48cb02b4a8474e started: 1702863086021; exited: 2023-12-18T01:39:48.121196Z; ]
+Dec-17 20:39:50.988 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=BACTOPIATOOLS:GTDB:CLASSIFY (FG8); work-dir=/fs/scratch/PAS0471/jelmer/bactopia/e6/d85f1f1ae564c2ef48cb02b4a8474e
+  error [nextflow.exception.ProcessFailedException]: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG8)` terminated with an error exit status (1)
+Dec-17 20:39:50.989 [Task monitor] INFO  nextflow.processor.TaskProcessor - [e6/d85f1f] NOTE: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG8)` terminated with an error exit status (1) -- Execution is retried (1)
+Dec-17 20:39:50.998 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 25225259; id: 41; name: BACTOPIATOOLS:GTDB:CLASSIFY (FG14); status: COMPLETED; exit: 1; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/ca/d3516b680d7587a9d2148d5146c663 started: 1702863086037; exited: 2023-12-18T01:39:50.150829Z; ]
+Dec-17 20:39:50.998 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=BACTOPIATOOLS:GTDB:CLASSIFY (FG14); work-dir=/fs/scratch/PAS0471/jelmer/bactopia/ca/d3516b680d7587a9d2148d5146c663
+  error [nextflow.exception.ProcessFailedException]: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG14)` terminated with an error exit status (1)
+Dec-17 20:39:50.999 [Task monitor] INFO  nextflow.processor.TaskProcessor - [ca/d3516b] NOTE: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG14)` terminated with an error exit status (1) -- Execution is retried (1)
+Dec-17 20:39:51.008 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 25225269; id: 48; name: BACTOPIATOOLS:GTDB:CLASSIFY (FG77); status: COMPLETED; exit: 1; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/d1/f125fd0b68e0098df52ca3f34d506c started: 1702863086056; exited: 2023-12-18T01:39:48.132966Z; ]
+Dec-17 20:39:51.008 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=BACTOPIATOOLS:GTDB:CLASSIFY (FG77); work-dir=/fs/scratch/PAS0471/jelmer/bactopia/d1/f125fd0b68e0098df52ca3f34d506c
+  error [nextflow.exception.ProcessFailedException]: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG77)` terminated with an error exit status (1)
+Dec-17 20:39:51.008 [Task monitor] INFO  nextflow.processor.TaskProcessor - [d1/f125fd] NOTE: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG77)` terminated with an error exit status (1) -- Execution is retried (1)
+Dec-17 20:39:51.017 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 25225272; id: 54; name: BACTOPIATOOLS:GTDB:CLASSIFY (FG65); status: COMPLETED; exit: 1; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/0b/2c2bb6dc27b40e7c58579b873903dd started: 1702863086063; exited: 2023-12-18T01:39:46.587729Z; ]
+Dec-17 20:39:51.017 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=BACTOPIATOOLS:GTDB:CLASSIFY (FG65); work-dir=/fs/scratch/PAS0471/jelmer/bactopia/0b/2c2bb6dc27b40e7c58579b873903dd
+  error [nextflow.exception.ProcessFailedException]: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG65)` terminated with an error exit status (1)
+Dec-17 20:39:51.018 [Task monitor] INFO  nextflow.processor.TaskProcessor - [0b/2c2bb6] NOTE: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG65)` terminated with an error exit status (1) -- Execution is retried (1)
+Dec-17 20:39:51.151 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG137) > jobId: 25225438; workDir: /fs/scratch/PAS0471/jelmer/bactopia/d9/4906469e81be8647f2e4d63b33dbac
+Dec-17 20:39:51.151 [Task submitter] INFO  nextflow.Session - [d9/490646] Re-submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG137)
+Dec-17 20:39:51.288 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG90) > jobId: 25225439; workDir: /fs/scratch/PAS0471/jelmer/bactopia/2d/7de9ad0ee32e93485b011dbd905d1e
+Dec-17 20:39:51.289 [Task submitter] INFO  nextflow.Session - [2d/7de9ad] Re-submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG90)
+Dec-17 20:39:51.446 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG18) > jobId: 25225440; workDir: /fs/scratch/PAS0471/jelmer/bactopia/a1/a834ec8d481db6ce287163f2f9263b
+Dec-17 20:39:51.446 [Task submitter] INFO  nextflow.Session - [a1/a834ec] Re-submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG18)
+Dec-17 20:39:51.572 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG103) > jobId: 25225441; workDir: /fs/scratch/PAS0471/jelmer/bactopia/34/0cc712c136cbbedbaff7fbde32d49c
+Dec-17 20:39:51.572 [Task submitter] INFO  nextflow.Session - [34/0cc712] Re-submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG103)
+Dec-17 20:39:51.696 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG8) > jobId: 25225442; workDir: /fs/scratch/PAS0471/jelmer/bactopia/7a/9aee8bf375366e445867b0b884488a
+Dec-17 20:39:51.696 [Task submitter] INFO  nextflow.Session - [7a/9aee8b] Re-submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG8)
+Dec-17 20:39:51.822 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG14) > jobId: 25225443; workDir: /fs/scratch/PAS0471/jelmer/bactopia/c1/1fe2863d8cc8d5e4f4572c9231e95e
+Dec-17 20:39:51.822 [Task submitter] INFO  nextflow.Session - [c1/1fe286] Re-submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG14)
+Dec-17 20:39:51.946 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG77) > jobId: 25225444; workDir: /fs/scratch/PAS0471/jelmer/bactopia/4c/5b288fd1a55dcc223a3ce554f6f64d
+Dec-17 20:39:51.946 [Task submitter] INFO  nextflow.Session - [4c/5b288f] Re-submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG77)
+Dec-17 20:39:52.126 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG65) > jobId: 25225446; workDir: /fs/scratch/PAS0471/jelmer/bactopia/9b/ae3c8838597cc776700dd0c87c7f01
+Dec-17 20:39:52.126 [Task submitter] INFO  nextflow.Session - [9b/ae3c88] Re-submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG65)
+Dec-17 20:39:55.940 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 25225235; id: 19; name: BACTOPIATOOLS:GTDB:CLASSIFY (FG95); status: COMPLETED; exit: 1; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/fa/9982d24e731a1d9a6e1faf33a2e1bf started: 1702863085966; exited: 2023-12-18T01:39:52.048312Z; ]
+Dec-17 20:39:55.941 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=BACTOPIATOOLS:GTDB:CLASSIFY (FG95); work-dir=/fs/scratch/PAS0471/jelmer/bactopia/fa/9982d24e731a1d9a6e1faf33a2e1bf
+  error [nextflow.exception.ProcessFailedException]: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG95)` terminated with an error exit status (1)
+Dec-17 20:39:55.942 [Task monitor] INFO  nextflow.processor.TaskProcessor - [fa/9982d2] NOTE: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG95)` terminated with an error exit status (1) -- Execution is retried (1)
+Dec-17 20:39:55.955 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 25225240; id: 24; name: BACTOPIATOOLS:GTDB:CLASSIFY (FG96); status: COMPLETED; exit: 1; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/d6/777a715c253452f033601cf007dd21 started: 1702863085983; exited: 2023-12-18T01:39:55.551144Z; ]
+Dec-17 20:39:55.955 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=BACTOPIATOOLS:GTDB:CLASSIFY (FG96); work-dir=/fs/scratch/PAS0471/jelmer/bactopia/d6/777a715c253452f033601cf007dd21
+  error [nextflow.exception.ProcessFailedException]: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG96)` terminated with an error exit status (1)
+Dec-17 20:39:55.955 [Task monitor] INFO  nextflow.processor.TaskProcessor - [d6/777a71] NOTE: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG96)` terminated with an error exit status (1) -- Execution is retried (1)
+Dec-17 20:39:55.968 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 25225276; id: 58; name: BACTOPIATOOLS:GTDB:CLASSIFY (FG11); status: COMPLETED; exit: 1; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/34/e5821f00250bb3df58c20041da03e4 started: 1702863086073; exited: 2023-12-18T01:39:54.135229Z; ]
+Dec-17 20:39:55.968 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=BACTOPIATOOLS:GTDB:CLASSIFY (FG11); work-dir=/fs/scratch/PAS0471/jelmer/bactopia/34/e5821f00250bb3df58c20041da03e4
+  error [nextflow.exception.ProcessFailedException]: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG11)` terminated with an error exit status (1)
+Dec-17 20:39:55.968 [Task monitor] INFO  nextflow.processor.TaskProcessor - [34/e5821f] NOTE: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG11)` terminated with an error exit status (1) -- Execution is retried (1)
+Dec-17 20:39:55.979 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 25225278; id: 60; name: BACTOPIATOOLS:GTDB:CLASSIFY (FG113); status: COMPLETED; exit: 1; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/5d/7d9e223e720197b116cc25834b827f started: 1702863086078; exited: 2023-12-18T01:39:54.576315Z; ]
+Dec-17 20:39:55.979 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=BACTOPIATOOLS:GTDB:CLASSIFY (FG113); work-dir=/fs/scratch/PAS0471/jelmer/bactopia/5d/7d9e223e720197b116cc25834b827f
+  error [nextflow.exception.ProcessFailedException]: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG113)` terminated with an error exit status (1)
+Dec-17 20:39:55.979 [Task monitor] INFO  nextflow.processor.TaskProcessor - [5d/7d9e22] NOTE: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG113)` terminated with an error exit status (1) -- Execution is retried (1)
+Dec-17 20:39:56.162 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG95) > jobId: 25225449; workDir: /fs/scratch/PAS0471/jelmer/bactopia/0d/69f732c4698c79689c066454071958
+Dec-17 20:39:56.163 [Task submitter] INFO  nextflow.Session - [0d/69f732] Re-submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG95)
+Dec-17 20:39:56.303 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG96) > jobId: 25225450; workDir: /fs/scratch/PAS0471/jelmer/bactopia/70/a365369ff955297d4a5ce73e88b570
+Dec-17 20:39:56.303 [Task submitter] INFO  nextflow.Session - [70/a36536] Re-submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG96)
+Dec-17 20:39:56.427 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG11) > jobId: 25225451; workDir: /fs/scratch/PAS0471/jelmer/bactopia/81/84d9ddb23979d7f3e55af79f143212
+Dec-17 20:39:56.427 [Task submitter] INFO  nextflow.Session - [81/84d9dd] Re-submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG11)
+Dec-17 20:39:56.630 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG113) > jobId: 25225452; workDir: /fs/scratch/PAS0471/jelmer/bactopia/78/4d16c94b1cee8df30e2b3e666a1eb4
+Dec-17 20:39:56.630 [Task submitter] INFO  nextflow.Session - [78/4d16c9] Re-submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG113)
+Dec-17 20:40:00.940 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 25225234; id: 17; name: BACTOPIATOOLS:GTDB:CLASSIFY (FG94); status: COMPLETED; exit: 1; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/b2/07eaa96a5dc8e98e416278485c3d2a started: 1702863085963; exited: 2023-12-18T01:39:57.272732Z; ]
+Dec-17 20:40:00.941 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=BACTOPIATOOLS:GTDB:CLASSIFY (FG94); work-dir=/fs/scratch/PAS0471/jelmer/bactopia/b2/07eaa96a5dc8e98e416278485c3d2a
+  error [nextflow.exception.ProcessFailedException]: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG94)` terminated with an error exit status (1)
+Dec-17 20:40:00.942 [Task monitor] INFO  nextflow.processor.TaskProcessor - [b2/07eaa9] NOTE: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG94)` terminated with an error exit status (1) -- Execution is retried (1)
+Dec-17 20:40:00.953 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 25225241; id: 25; name: BACTOPIATOOLS:GTDB:CLASSIFY (FG7); status: COMPLETED; exit: 1; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/05/13073016da2451a54cb515237ab56d started: 1702863085987; exited: 2023-12-18T01:39:59.039052Z; ]
+Dec-17 20:40:00.953 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=BACTOPIATOOLS:GTDB:CLASSIFY (FG7); work-dir=/fs/scratch/PAS0471/jelmer/bactopia/05/13073016da2451a54cb515237ab56d
+  error [nextflow.exception.ProcessFailedException]: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG7)` terminated with an error exit status (1)
+Dec-17 20:40:00.954 [Task monitor] INFO  nextflow.processor.TaskProcessor - [05/130730] NOTE: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG7)` terminated with an error exit status (1) -- Execution is retried (1)
+Dec-17 20:40:00.964 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 25225243; id: 28; name: BACTOPIATOOLS:GTDB:CLASSIFY (FG97); status: COMPLETED; exit: 1; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/6f/77e82c21e658a661b66698c629d4e2 started: 1702863085994; exited: 2023-12-18T01:39:58.766603Z; ]
+Dec-17 20:40:00.964 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=BACTOPIATOOLS:GTDB:CLASSIFY (FG97); work-dir=/fs/scratch/PAS0471/jelmer/bactopia/6f/77e82c21e658a661b66698c629d4e2
+  error [nextflow.exception.ProcessFailedException]: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG97)` terminated with an error exit status (1)
+Dec-17 20:40:00.964 [Task monitor] INFO  nextflow.processor.TaskProcessor - [6f/77e82c] NOTE: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG97)` terminated with an error exit status (1) -- Execution is retried (1)
+Dec-17 20:40:00.976 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 25225264; id: 47; name: BACTOPIATOOLS:GTDB:CLASSIFY (FG42W); status: COMPLETED; exit: 1; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/b7/71f0db82b5028a29aa9f54da27d8ab started: 1702863086047; exited: 2023-12-18T01:39:59.35832Z; ]
+Dec-17 20:40:00.976 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=BACTOPIATOOLS:GTDB:CLASSIFY (FG42W); work-dir=/fs/scratch/PAS0471/jelmer/bactopia/b7/71f0db82b5028a29aa9f54da27d8ab
+  error [nextflow.exception.ProcessFailedException]: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG42W)` terminated with an error exit status (1)
+Dec-17 20:40:00.976 [Task monitor] INFO  nextflow.processor.TaskProcessor - [b7/71f0db] NOTE: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG42W)` terminated with an error exit status (1) -- Execution is retried (1)
+Dec-17 20:40:00.987 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 25225273; id: 55; name: BACTOPIATOOLS:GTDB:CLASSIFY (FG25); status: COMPLETED; exit: 1; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/78/801438c5f517150f2a19ac98f1be9a started: 1702863086065; exited: 2023-12-18T01:39:56.781383Z; ]
+Dec-17 20:40:00.987 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=BACTOPIATOOLS:GTDB:CLASSIFY (FG25); work-dir=/fs/scratch/PAS0471/jelmer/bactopia/78/801438c5f517150f2a19ac98f1be9a
+  error [nextflow.exception.ProcessFailedException]: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG25)` terminated with an error exit status (1)
+Dec-17 20:40:00.988 [Task monitor] INFO  nextflow.processor.TaskProcessor - [78/801438] NOTE: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG25)` terminated with an error exit status (1) -- Execution is retried (1)
+Dec-17 20:40:01.328 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG94) > jobId: 25225453; workDir: /fs/scratch/PAS0471/jelmer/bactopia/40/c9ec65d4d25147a10cc4ac31f3f9f2
+Dec-17 20:40:01.329 [Task submitter] INFO  nextflow.Session - [40/c9ec65] Re-submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG94)
+Dec-17 20:40:02.198 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG7) > jobId: 25225454; workDir: /fs/scratch/PAS0471/jelmer/bactopia/9d/b45d27bde3a19470eb5c3897e703db
+Dec-17 20:40:02.198 [Task submitter] INFO  nextflow.Session - [9d/b45d27] Re-submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG7)
+Dec-17 20:40:02.761 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG97) > jobId: 25225455; workDir: /fs/scratch/PAS0471/jelmer/bactopia/a1/98892eb97e3aaf06f6b96c9ea4e244
+Dec-17 20:40:02.761 [Task submitter] INFO  nextflow.Session - [a1/98892e] Re-submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG97)
+Dec-17 20:40:03.239 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG42W) > jobId: 25225456; workDir: /fs/scratch/PAS0471/jelmer/bactopia/b0/d575695fa1e6013afe240902d705b4
+Dec-17 20:40:03.239 [Task submitter] INFO  nextflow.Session - [b0/d57569] Re-submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG42W)
+Dec-17 20:40:03.661 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG25) > jobId: 25225457; workDir: /fs/scratch/PAS0471/jelmer/bactopia/29/5873351d3e79448813dd274dd8879d
+Dec-17 20:40:03.661 [Task submitter] INFO  nextflow.Session - [29/587335] Re-submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG25)
+Dec-17 20:40:05.940 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 25225225; id: 5; name: BACTOPIATOOLS:GTDB:CLASSIFY (FG115); status: COMPLETED; exit: 1; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/53/f154975a3d70b93c222f5711782933 started: 1702863085934; exited: 2023-12-18T01:40:01.316576Z; ]
+Dec-17 20:40:05.940 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=BACTOPIATOOLS:GTDB:CLASSIFY (FG115); work-dir=/fs/scratch/PAS0471/jelmer/bactopia/53/f154975a3d70b93c222f5711782933
+  error [nextflow.exception.ProcessFailedException]: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG115)` terminated with an error exit status (1)
+Dec-17 20:40:05.941 [Task monitor] INFO  nextflow.processor.TaskProcessor - [53/f15497] NOTE: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG115)` terminated with an error exit status (1) -- Execution is retried (1)
+Dec-17 20:40:05.952 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 25225237; id: 22; name: BACTOPIATOOLS:GTDB:CLASSIFY (FG100); status: COMPLETED; exit: 1; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/b2/caeffcfe39c1f8cba13b0f73753c1b started: 1702863085972; exited: 2023-12-18T01:40:01.971253Z; ]
+Dec-17 20:40:05.953 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=BACTOPIATOOLS:GTDB:CLASSIFY (FG100); work-dir=/fs/scratch/PAS0471/jelmer/bactopia/b2/caeffcfe39c1f8cba13b0f73753c1b
+  error [nextflow.exception.ProcessFailedException]: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG100)` terminated with an error exit status (1)
+Dec-17 20:40:05.953 [Task monitor] INFO  nextflow.processor.TaskProcessor - [b2/caeffc] NOTE: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG100)` terminated with an error exit status (1) -- Execution is retried (1)
+Dec-17 20:40:05.965 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 25225255; id: 37; name: BACTOPIATOOLS:GTDB:CLASSIFY (FG19); status: COMPLETED; exit: 1; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/88/219a8f6dbef1ea6063e3da0b932fa9 started: 1702863086026; exited: 2023-12-18T01:40:02.293338Z; ]
+Dec-17 20:40:05.965 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=BACTOPIATOOLS:GTDB:CLASSIFY (FG19); work-dir=/fs/scratch/PAS0471/jelmer/bactopia/88/219a8f6dbef1ea6063e3da0b932fa9
+  error [nextflow.exception.ProcessFailedException]: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG19)` terminated with an error exit status (1)
+Dec-17 20:40:05.966 [Task monitor] INFO  nextflow.processor.TaskProcessor - [88/219a8f] NOTE: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG19)` terminated with an error exit status (1) -- Execution is retried (1)
+Dec-17 20:40:05.976 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 25225257; id: 40; name: BACTOPIATOOLS:GTDB:CLASSIFY (FG68); status: COMPLETED; exit: 1; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/f5/730e59f904631b9489ea07bf407516 started: 1702863086031; exited: 2023-12-18T01:40:03.026166Z; ]
+Dec-17 20:40:05.976 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=BACTOPIATOOLS:GTDB:CLASSIFY (FG68); work-dir=/fs/scratch/PAS0471/jelmer/bactopia/f5/730e59f904631b9489ea07bf407516
+  error [nextflow.exception.ProcessFailedException]: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG68)` terminated with an error exit status (1)
+Dec-17 20:40:05.976 [Task monitor] INFO  nextflow.processor.TaskProcessor - [f5/730e59] NOTE: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG68)` terminated with an error exit status (1) -- Execution is retried (1)
+Dec-17 20:40:07.335 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG115) > jobId: 25225459; workDir: /fs/scratch/PAS0471/jelmer/bactopia/eb/06a54164c0f8d084161cf5f97b3b64
+Dec-17 20:40:07.335 [Task submitter] INFO  nextflow.Session - [eb/06a541] Re-submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG115)
+Dec-17 20:40:07.720 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG100) > jobId: 25225460; workDir: /fs/scratch/PAS0471/jelmer/bactopia/95/431866707d822e317cd1a89d0e075c
+Dec-17 20:40:07.720 [Task submitter] INFO  nextflow.Session - [95/431866] Re-submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG100)
+Dec-17 20:40:08.144 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG19) > jobId: 25225461; workDir: /fs/scratch/PAS0471/jelmer/bactopia/ad/15c29085f7f2e7a8ed038bb2d0632b
+Dec-17 20:40:08.144 [Task submitter] INFO  nextflow.Session - [ad/15c290] Re-submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG19)
+Dec-17 20:40:08.477 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG68) > jobId: 25225462; workDir: /fs/scratch/PAS0471/jelmer/bactopia/d8/a18094f02969006f8343af800849c7
+Dec-17 20:40:08.477 [Task submitter] INFO  nextflow.Session - [d8/a18094] Re-submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG68)
+Dec-17 20:40:10.940 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 25225216; id: 9; name: BACTOPIATOOLS:GTDB:CLASSIFY (FG46); status: COMPLETED; exit: 1; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/20/604c6981c900b4f10a73695f009ad4 started: 1702863085888; exited: 2023-12-18T01:40:08.595335Z; ]
+Dec-17 20:40:10.941 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=BACTOPIATOOLS:GTDB:CLASSIFY (FG46); work-dir=/fs/scratch/PAS0471/jelmer/bactopia/20/604c6981c900b4f10a73695f009ad4
+  error [nextflow.exception.ProcessFailedException]: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG46)` terminated with an error exit status (1)
+Dec-17 20:40:10.941 [Task monitor] INFO  nextflow.processor.TaskProcessor - [20/604c69] NOTE: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG46)` terminated with an error exit status (1) -- Execution is retried (1)
+Dec-17 20:40:10.952 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 25225220; id: 8; name: BACTOPIATOOLS:GTDB:CLASSIFY (FG6); status: COMPLETED; exit: 1; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/5d/1f975c31d383db2b4ed34ec2e5c8fe started: 1702863085907; exited: 2023-12-18T01:40:08.532845Z; ]
+Dec-17 20:40:10.953 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=BACTOPIATOOLS:GTDB:CLASSIFY (FG6); work-dir=/fs/scratch/PAS0471/jelmer/bactopia/5d/1f975c31d383db2b4ed34ec2e5c8fe
+  error [nextflow.exception.ProcessFailedException]: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG6)` terminated with an error exit status (1)
+Dec-17 20:40:10.953 [Task monitor] INFO  nextflow.processor.TaskProcessor - [5d/1f975c] NOTE: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG6)` terminated with an error exit status (1) -- Execution is retried (1)
+Dec-17 20:40:10.964 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 25225228; id: 12; name: BACTOPIATOOLS:GTDB:CLASSIFY (FG148); status: COMPLETED; exit: 1; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/28/95b3ab3f0c686d0f9090f4f5272b9d started: 1702863085945; exited: 2023-12-18T01:40:08.672353Z; ]
+Dec-17 20:40:10.964 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=BACTOPIATOOLS:GTDB:CLASSIFY (FG148); work-dir=/fs/scratch/PAS0471/jelmer/bactopia/28/95b3ab3f0c686d0f9090f4f5272b9d
+  error [nextflow.exception.ProcessFailedException]: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG148)` terminated with an error exit status (1)
+Dec-17 20:40:10.965 [Task monitor] INFO  nextflow.processor.TaskProcessor - [28/95b3ab] NOTE: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG148)` terminated with an error exit status (1) -- Execution is retried (1)
+Dec-17 20:40:10.975 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 25225229; id: 14; name: BACTOPIATOOLS:GTDB:CLASSIFY (FG156); status: COMPLETED; exit: 1; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/d0/b89ec3bc24cc09f104e417d37c63af started: 1702863085949; exited: 2023-12-18T01:40:09.17402Z; ]
+Dec-17 20:40:10.975 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=BACTOPIATOOLS:GTDB:CLASSIFY (FG156); work-dir=/fs/scratch/PAS0471/jelmer/bactopia/d0/b89ec3bc24cc09f104e417d37c63af
+  error [nextflow.exception.ProcessFailedException]: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG156)` terminated with an error exit status (1)
+Dec-17 20:40:10.975 [Task monitor] INFO  nextflow.processor.TaskProcessor - [d0/b89ec3] NOTE: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG156)` terminated with an error exit status (1) -- Execution is retried (1)
+Dec-17 20:40:10.985 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 25225238; id: 21; name: BACTOPIATOOLS:GTDB:CLASSIFY (FG34); status: COMPLETED; exit: 1; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/2a/702f1d7a67076f80a37c1c725958ab started: 1702863085976; exited: 2023-12-18T01:40:09.458327Z; ]
+Dec-17 20:40:10.985 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=BACTOPIATOOLS:GTDB:CLASSIFY (FG34); work-dir=/fs/scratch/PAS0471/jelmer/bactopia/2a/702f1d7a67076f80a37c1c725958ab
+  error [nextflow.exception.ProcessFailedException]: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG34)` terminated with an error exit status (1)
+Dec-17 20:40:10.986 [Task monitor] INFO  nextflow.processor.TaskProcessor - [2a/702f1d] NOTE: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG34)` terminated with an error exit status (1) -- Execution is retried (1)
+Dec-17 20:40:10.995 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 25225245; id: 31; name: BACTOPIATOOLS:GTDB:CLASSIFY (FG139); status: COMPLETED; exit: 1; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/d0/41931a1bdde87732c242ac59573edd started: 1702863086000; exited: 2023-12-18T01:40:08.58821Z; ]
+Dec-17 20:40:10.996 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=BACTOPIATOOLS:GTDB:CLASSIFY (FG139); work-dir=/fs/scratch/PAS0471/jelmer/bactopia/d0/41931a1bdde87732c242ac59573edd
+  error [nextflow.exception.ProcessFailedException]: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG139)` terminated with an error exit status (1)
+Dec-17 20:40:10.996 [Task monitor] INFO  nextflow.processor.TaskProcessor - [d0/41931a] NOTE: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG139)` terminated with an error exit status (1) -- Execution is retried (1)
+Dec-17 20:40:11.005 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 25225261; id: 45; name: BACTOPIATOOLS:GTDB:CLASSIFY (FG40); status: COMPLETED; exit: 1; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/39/4f95c87bdd61c9f330041ca2b864f6 started: 1702863086039; exited: 2023-12-18T01:40:08.717572Z; ]
+Dec-17 20:40:11.005 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=BACTOPIATOOLS:GTDB:CLASSIFY (FG40); work-dir=/fs/scratch/PAS0471/jelmer/bactopia/39/4f95c87bdd61c9f330041ca2b864f6
+  error [nextflow.exception.ProcessFailedException]: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG40)` terminated with an error exit status (1)
+Dec-17 20:40:11.006 [Task monitor] INFO  nextflow.processor.TaskProcessor - [39/4f95c8] NOTE: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG40)` terminated with an error exit status (1) -- Execution is retried (1)
+Dec-17 20:40:11.015 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 25225263; id: 44; name: BACTOPIATOOLS:GTDB:CLASSIFY (FG29); status: COMPLETED; exit: 1; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/e0/75f177ce2d5fe499213565c05e4343 started: 1702863086045; exited: 2023-12-18T01:40:08.320903Z; ]
+Dec-17 20:40:11.015 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=BACTOPIATOOLS:GTDB:CLASSIFY (FG29); work-dir=/fs/scratch/PAS0471/jelmer/bactopia/e0/75f177ce2d5fe499213565c05e4343
+  error [nextflow.exception.ProcessFailedException]: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG29)` terminated with an error exit status (1)
+Dec-17 20:40:11.015 [Task monitor] INFO  nextflow.processor.TaskProcessor - [e0/75f177] NOTE: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG29)` terminated with an error exit status (1) -- Execution is retried (1)
+Dec-17 20:40:11.153 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG46) > jobId: 25225465; workDir: /fs/scratch/PAS0471/jelmer/bactopia/e9/b69a483074879ee536caa97dd8579e
+Dec-17 20:40:11.153 [Task submitter] INFO  nextflow.Session - [e9/b69a48] Re-submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG46)
+Dec-17 20:40:11.350 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG6) > jobId: 25225467; workDir: /fs/scratch/PAS0471/jelmer/bactopia/33/dbcba70eebc5ea5ede570bb3b7c427
+Dec-17 20:40:11.350 [Task submitter] INFO  nextflow.Session - [33/dbcba7] Re-submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG6)
+Dec-17 20:40:11.492 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG148) > jobId: 25225468; workDir: /fs/scratch/PAS0471/jelmer/bactopia/7d/c5b9aaa2a1eb879920bb7d6f4e0ca7
+Dec-17 20:40:11.492 [Task submitter] INFO  nextflow.Session - [7d/c5b9aa] Re-submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG148)
+Dec-17 20:40:11.693 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG156) > jobId: 25225469; workDir: /fs/scratch/PAS0471/jelmer/bactopia/4f/6e3ea0365080da849ebf17943d707e
+Dec-17 20:40:11.693 [Task submitter] INFO  nextflow.Session - [4f/6e3ea0] Re-submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG156)
+Dec-17 20:40:11.894 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG34) > jobId: 25225470; workDir: /fs/scratch/PAS0471/jelmer/bactopia/8f/f3e4c6ab720fb390596142a065a4fb
+Dec-17 20:40:11.895 [Task submitter] INFO  nextflow.Session - [8f/f3e4c6] Re-submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG34)
+Dec-17 20:40:12.035 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG139) > jobId: 25225471; workDir: /fs/scratch/PAS0471/jelmer/bactopia/d2/a170735f13a84c5fc1d275a4b1f463
+Dec-17 20:40:12.035 [Task submitter] INFO  nextflow.Session - [d2/a17073] Re-submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG139)
+Dec-17 20:40:12.160 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG40) > jobId: 25225473; workDir: /fs/scratch/PAS0471/jelmer/bactopia/c2/89cd12061bdd8c5067ffdd1baef1f7
+Dec-17 20:40:12.160 [Task submitter] INFO  nextflow.Session - [c2/89cd12] Re-submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG40)
+Dec-17 20:40:12.289 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG29) > jobId: 25225474; workDir: /fs/scratch/PAS0471/jelmer/bactopia/70/16f4ebd55f19ba6a694c2b6ff03793
+Dec-17 20:40:12.289 [Task submitter] INFO  nextflow.Session - [70/16f4eb] Re-submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG29)
+Dec-17 20:40:15.943 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 25225221; id: 2; name: BACTOPIATOOLS:GTDB:CLASSIFY (FG45); status: COMPLETED; exit: 1; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/c6/5a5cad8c92f4cf153f27b841f99076 started: 1702863085912; exited: 2023-12-18T01:40:14.768666Z; ]
+Dec-17 20:40:15.943 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=BACTOPIATOOLS:GTDB:CLASSIFY (FG45); work-dir=/fs/scratch/PAS0471/jelmer/bactopia/c6/5a5cad8c92f4cf153f27b841f99076
+  error [nextflow.exception.ProcessFailedException]: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG45)` terminated with an error exit status (1)
+Dec-17 20:40:15.944 [Task monitor] INFO  nextflow.processor.TaskProcessor - [c6/5a5cad] NOTE: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG45)` terminated with an error exit status (1) -- Execution is retried (1)
+Dec-17 20:40:15.956 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 25225232; id: 16; name: BACTOPIATOOLS:GTDB:CLASSIFY (FG47); status: COMPLETED; exit: 1; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/7e/2d6624e898f8a9e8906de73f211a65 started: 1702863085956; exited: 2023-12-18T01:40:15.386166Z; ]
+Dec-17 20:40:15.956 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=BACTOPIATOOLS:GTDB:CLASSIFY (FG47); work-dir=/fs/scratch/PAS0471/jelmer/bactopia/7e/2d6624e898f8a9e8906de73f211a65
+  error [nextflow.exception.ProcessFailedException]: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG47)` terminated with an error exit status (1)
+Dec-17 20:40:15.957 [Task monitor] INFO  nextflow.processor.TaskProcessor - [7e/2d6624] NOTE: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG47)` terminated with an error exit status (1) -- Execution is retried (1)
+Dec-17 20:40:15.967 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 25225268; id: 51; name: BACTOPIATOOLS:GTDB:CLASSIFY (FG63); status: COMPLETED; exit: 1; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/e4/3843edce2c4ba7744cb4d7edcdd63f started: 1702863086054; exited: 2023-12-18T01:40:15.227273Z; ]
+Dec-17 20:40:15.967 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=BACTOPIATOOLS:GTDB:CLASSIFY (FG63); work-dir=/fs/scratch/PAS0471/jelmer/bactopia/e4/3843edce2c4ba7744cb4d7edcdd63f
+  error [nextflow.exception.ProcessFailedException]: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG63)` terminated with an error exit status (1)
+Dec-17 20:40:15.968 [Task monitor] INFO  nextflow.processor.TaskProcessor - [e4/3843ed] NOTE: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG63)` terminated with an error exit status (1) -- Execution is retried (1)
+Dec-17 20:40:15.978 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 25225274; id: 56; name: BACTOPIATOOLS:GTDB:CLASSIFY (FG154); status: COMPLETED; exit: 1; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/b9/68e26f80801d536464cf72cbfb044b started: 1702863086067; exited: 2023-12-18T01:40:11.853366Z; ]
+Dec-17 20:40:15.978 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=BACTOPIATOOLS:GTDB:CLASSIFY (FG154); work-dir=/fs/scratch/PAS0471/jelmer/bactopia/b9/68e26f80801d536464cf72cbfb044b
+  error [nextflow.exception.ProcessFailedException]: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG154)` terminated with an error exit status (1)
+Dec-17 20:40:15.978 [Task monitor] INFO  nextflow.processor.TaskProcessor - [b9/68e26f] NOTE: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG154)` terminated with an error exit status (1) -- Execution is retried (1)
+Dec-17 20:40:16.154 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG45) > jobId: 25225477; workDir: /fs/scratch/PAS0471/jelmer/bactopia/3b/f613475925fcc43420dec8628fdcb0
+Dec-17 20:40:16.155 [Task submitter] INFO  nextflow.Session - [3b/f61347] Re-submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG45)
+Dec-17 20:40:16.307 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG47) > jobId: 25225478; workDir: /fs/scratch/PAS0471/jelmer/bactopia/43/6b30a66d06977837e72d0038f5c1b3
+Dec-17 20:40:16.307 [Task submitter] INFO  nextflow.Session - [43/6b30a6] Re-submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG47)
+Dec-17 20:40:16.432 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG63) > jobId: 25225479; workDir: /fs/scratch/PAS0471/jelmer/bactopia/29/8e08d462588702c912d86db750d51c
+Dec-17 20:40:16.433 [Task submitter] INFO  nextflow.Session - [29/8e08d4] Re-submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG63)
+Dec-17 20:40:16.557 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG154) > jobId: 25225480; workDir: /fs/scratch/PAS0471/jelmer/bactopia/7d/b103e1533d6179c19eb5ba6e21a38e
+Dec-17 20:40:16.557 [Task submitter] INFO  nextflow.Session - [7d/b103e1] Re-submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG154)
+Dec-17 20:40:21.146 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 25225233; id: 18; name: BACTOPIATOOLS:GTDB:CLASSIFY (FG48); status: COMPLETED; exit: 1; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/6f/58b7f69290e8deed18d614365591d0 started: 1702863085960; exited: 2023-12-18T01:40:20.461443Z; ]
+Dec-17 20:40:21.146 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=BACTOPIATOOLS:GTDB:CLASSIFY (FG48); work-dir=/fs/scratch/PAS0471/jelmer/bactopia/6f/58b7f69290e8deed18d614365591d0
+  error [nextflow.exception.ProcessFailedException]: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG48)` terminated with an error exit status (1)
+Dec-17 20:40:21.147 [Task monitor] INFO  nextflow.processor.TaskProcessor - [6f/58b7f6] NOTE: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG48)` terminated with an error exit status (1) -- Execution is retried (1)
+Dec-17 20:40:21.157 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 25225246; id: 29; name: BACTOPIATOOLS:GTDB:CLASSIFY (FG43); status: COMPLETED; exit: 1; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/22/a52bbd2c8e54af0cb6612b5aaff35e started: 1702863086003; exited: 2023-12-18T01:40:16.074923Z; ]
+Dec-17 20:40:21.158 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=BACTOPIATOOLS:GTDB:CLASSIFY (FG43); work-dir=/fs/scratch/PAS0471/jelmer/bactopia/22/a52bbd2c8e54af0cb6612b5aaff35e
+  error [nextflow.exception.ProcessFailedException]: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG43)` terminated with an error exit status (1)
+Dec-17 20:40:21.158 [Task monitor] INFO  nextflow.processor.TaskProcessor - [22/a52bbd] NOTE: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG43)` terminated with an error exit status (1) -- Execution is retried (1)
+Dec-17 20:40:21.169 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 25225249; id: 35; name: BACTOPIATOOLS:GTDB:CLASSIFY (FG59); status: COMPLETED; exit: 1; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/8f/3091a19c6f5c196a281508528ea892 started: 1702863086011; exited: 2023-12-18T01:40:20.7718Z; ]
+Dec-17 20:40:21.169 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=BACTOPIATOOLS:GTDB:CLASSIFY (FG59); work-dir=/fs/scratch/PAS0471/jelmer/bactopia/8f/3091a19c6f5c196a281508528ea892
+  error [nextflow.exception.ProcessFailedException]: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG59)` terminated with an error exit status (1)
+Dec-17 20:40:21.169 [Task monitor] INFO  nextflow.processor.TaskProcessor - [8f/3091a1] NOTE: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG59)` terminated with an error exit status (1) -- Execution is retried (1)
+Dec-17 20:40:21.178 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 25225277; id: 59; name: BACTOPIATOOLS:GTDB:CLASSIFY (FG66); status: COMPLETED; exit: 1; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/89/c100b874ff646e68e253aa767cba04 started: 1702863086075; exited: 2023-12-18T01:40:16.232059Z; ]
+Dec-17 20:40:21.179 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=BACTOPIATOOLS:GTDB:CLASSIFY (FG66); work-dir=/fs/scratch/PAS0471/jelmer/bactopia/89/c100b874ff646e68e253aa767cba04
+  error [nextflow.exception.ProcessFailedException]: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG66)` terminated with an error exit status (1)
+Dec-17 20:40:21.179 [Task monitor] INFO  nextflow.processor.TaskProcessor - [89/c100b8] NOTE: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG66)` terminated with an error exit status (1) -- Execution is retried (1)
+Dec-17 20:40:21.189 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 25225284; id: 66; name: BACTOPIATOOLS:GTDB:CLASSIFY (FG125); status: COMPLETED; exit: 1; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/13/e5e65725f82920cdac082ff25c60a2 started: 1702863115923; exited: 2023-12-18T01:40:16.887622Z; ]
+Dec-17 20:40:21.189 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=BACTOPIATOOLS:GTDB:CLASSIFY (FG125); work-dir=/fs/scratch/PAS0471/jelmer/bactopia/13/e5e65725f82920cdac082ff25c60a2
+  error [nextflow.exception.ProcessFailedException]: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG125)` terminated with an error exit status (1)
+Dec-17 20:40:21.189 [Task monitor] INFO  nextflow.processor.TaskProcessor - [13/e5e657] NOTE: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG125)` terminated with an error exit status (1) -- Execution is retried (1)
+Dec-17 20:40:21.198 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 25225288; id: 70; name: BACTOPIATOOLS:GTDB:CLASSIFY (FG22); status: COMPLETED; exit: 1; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/b7/5ae4f5bd5e6f8bf7e0fa0d0431ac7c started: 1702863115941; exited: 2023-12-18T01:40:20.411939Z; ]
+Dec-17 20:40:21.199 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=BACTOPIATOOLS:GTDB:CLASSIFY (FG22); work-dir=/fs/scratch/PAS0471/jelmer/bactopia/b7/5ae4f5bd5e6f8bf7e0fa0d0431ac7c
+  error [nextflow.exception.ProcessFailedException]: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG22)` terminated with an error exit status (1)
+Dec-17 20:40:21.199 [Task monitor] INFO  nextflow.processor.TaskProcessor - [b7/5ae4f5] NOTE: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG22)` terminated with an error exit status (1) -- Execution is retried (1)
+Dec-17 20:40:21.347 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG48) > jobId: 25225481; workDir: /fs/scratch/PAS0471/jelmer/bactopia/fc/357cf4542a8cea53304c1d3ee8ec7c
+Dec-17 20:40:21.348 [Task submitter] INFO  nextflow.Session - [fc/357cf4] Re-submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG48)
+Dec-17 20:40:21.564 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG43) > jobId: 25225482; workDir: /fs/scratch/PAS0471/jelmer/bactopia/16/564d0c6874d0ae2f0f4578c7ae24a6
+Dec-17 20:40:21.564 [Task submitter] INFO  nextflow.Session - [16/564d0c] Re-submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG43)
+Dec-17 20:40:21.702 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG59) > jobId: 25225483; workDir: /fs/scratch/PAS0471/jelmer/bactopia/4a/ed75a8ccb5fd3009eb8824456d4314
+Dec-17 20:40:21.702 [Task submitter] INFO  nextflow.Session - [4a/ed75a8] Re-submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG59)
+Dec-17 20:40:21.830 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG66) > jobId: 25225484; workDir: /fs/scratch/PAS0471/jelmer/bactopia/15/0b6f95781902f7f16401a5d24debe2
+Dec-17 20:40:21.830 [Task submitter] INFO  nextflow.Session - [15/0b6f95] Re-submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG66)
+Dec-17 20:40:21.954 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG125) > jobId: 25225485; workDir: /fs/scratch/PAS0471/jelmer/bactopia/09/b0182454ad698b59fb20e31f093af4
+Dec-17 20:40:21.954 [Task submitter] INFO  nextflow.Session - [09/b01824] Re-submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG125)
+Dec-17 20:40:22.077 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG22) > jobId: 25225486; workDir: /fs/scratch/PAS0471/jelmer/bactopia/f7/cc585655c602c3efebba3873c8e56c
+Dec-17 20:40:22.077 [Task submitter] INFO  nextflow.Session - [f7/cc5856] Re-submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG22)
+Dec-17 20:40:25.942 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 25225217; id: 7; name: BACTOPIATOOLS:GTDB:CLASSIFY (FG86); status: COMPLETED; exit: 1; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/cb/ac128798c8d7792a647dba88604354 started: 1702863085893; exited: 2023-12-18T01:40:21.508099Z; ]
+Dec-17 20:40:25.942 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=BACTOPIATOOLS:GTDB:CLASSIFY (FG86); work-dir=/fs/scratch/PAS0471/jelmer/bactopia/cb/ac128798c8d7792a647dba88604354
+  error [nextflow.exception.ProcessFailedException]: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG86)` terminated with an error exit status (1)
+Dec-17 20:40:25.943 [Task monitor] INFO  nextflow.processor.TaskProcessor - [cb/ac1287] NOTE: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG86)` terminated with an error exit status (1) -- Execution is retried (1)
+Dec-17 20:40:25.953 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 25225224; id: 1; name: BACTOPIATOOLS:GTDB:CLASSIFY (FG85); status: COMPLETED; exit: 1; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/4f/c5335e9a1e9f04437b343b568d881b started: 1702863085930; exited: 2023-12-18T01:40:23.343702Z; ]
+Dec-17 20:40:25.954 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=BACTOPIATOOLS:GTDB:CLASSIFY (FG85); work-dir=/fs/scratch/PAS0471/jelmer/bactopia/4f/c5335e9a1e9f04437b343b568d881b
+  error [nextflow.exception.ProcessFailedException]: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG85)` terminated with an error exit status (1)
+Dec-17 20:40:25.954 [Task monitor] INFO  nextflow.processor.TaskProcessor - [4f/c5335e] NOTE: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG85)` terminated with an error exit status (1) -- Execution is retried (1)
+Dec-17 20:40:25.966 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 25225231; id: 15; name: BACTOPIATOOLS:GTDB:CLASSIFY (FG87); status: COMPLETED; exit: 1; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/3e/881a610c77f28ee91b0e746a8a18ed started: 1702863085953; exited: 2023-12-18T01:40:22.210329Z; ]
+Dec-17 20:40:25.966 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=BACTOPIATOOLS:GTDB:CLASSIFY (FG87); work-dir=/fs/scratch/PAS0471/jelmer/bactopia/3e/881a610c77f28ee91b0e746a8a18ed
+  error [nextflow.exception.ProcessFailedException]: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG87)` terminated with an error exit status (1)
+Dec-17 20:40:25.967 [Task monitor] INFO  nextflow.processor.TaskProcessor - [3e/881a61] NOTE: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG87)` terminated with an error exit status (1) -- Execution is retried (1)
+Dec-17 20:40:25.978 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 25225262; id: 43; name: BACTOPIATOOLS:GTDB:CLASSIFY (FG9); status: COMPLETED; exit: 1; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/63/625026d090722462f04ca7addb2cc9 started: 1702863086043; exited: 2023-12-18T01:40:23.860176Z; ]
+Dec-17 20:40:25.978 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=BACTOPIATOOLS:GTDB:CLASSIFY (FG9); work-dir=/fs/scratch/PAS0471/jelmer/bactopia/63/625026d090722462f04ca7addb2cc9
+  error [nextflow.exception.ProcessFailedException]: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG9)` terminated with an error exit status (1)
+Dec-17 20:40:25.978 [Task monitor] INFO  nextflow.processor.TaskProcessor - [63/625026] NOTE: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG9)` terminated with an error exit status (1) -- Execution is retried (1)
+Dec-17 20:40:26.152 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG86) > jobId: 25225487; workDir: /fs/scratch/PAS0471/jelmer/bactopia/af/9f070b00a1e07809e4374f71f9047e
+Dec-17 20:40:26.153 [Task submitter] INFO  nextflow.Session - [af/9f070b] Re-submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG86)
+Dec-17 20:40:26.362 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG85) > jobId: 25225488; workDir: /fs/scratch/PAS0471/jelmer/bactopia/dc/4638b6c8255941723b04035de57c01
+Dec-17 20:40:26.362 [Task submitter] INFO  nextflow.Session - [dc/4638b6] Re-submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG85)
+Dec-17 20:40:26.560 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG87) > jobId: 25225489; workDir: /fs/scratch/PAS0471/jelmer/bactopia/db/a68837135c7a5f9bff624dd5605564
+Dec-17 20:40:26.560 [Task submitter] INFO  nextflow.Session - [db/a68837] Re-submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG87)
+Dec-17 20:40:26.696 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG9) > jobId: 25225490; workDir: /fs/scratch/PAS0471/jelmer/bactopia/f1/9f2744645e986761dc0db1eda9dca8
+Dec-17 20:40:26.696 [Task submitter] INFO  nextflow.Session - [f1/9f2744] Re-submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG9)
+Dec-17 20:40:40.945 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 25225280; id: 62; name: BACTOPIATOOLS:GTDB:CLASSIFY (FG116); status: COMPLETED; exit: 1; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/8a/7f49527c1f5232d9e4dc783ebe85c4 started: 1702863115902; exited: 2023-12-18T01:40:37.367189Z; ]
+Dec-17 20:40:40.946 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=BACTOPIATOOLS:GTDB:CLASSIFY (FG116); work-dir=/fs/scratch/PAS0471/jelmer/bactopia/8a/7f49527c1f5232d9e4dc783ebe85c4
+  error [nextflow.exception.ProcessFailedException]: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG116)` terminated with an error exit status (1)
+Dec-17 20:40:40.946 [Task monitor] INFO  nextflow.processor.TaskProcessor - [8a/7f4952] NOTE: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG116)` terminated with an error exit status (1) -- Execution is retried (1)
+Dec-17 20:40:40.958 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 25225283; id: 65; name: BACTOPIATOOLS:GTDB:CLASSIFY (FG35); status: COMPLETED; exit: 1; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/a4/7efdbac3ad78bbf1ec4538a12b4e9e started: 1702863115917; exited: 2023-12-18T01:40:38.05381Z; ]
+Dec-17 20:40:40.958 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=BACTOPIATOOLS:GTDB:CLASSIFY (FG35); work-dir=/fs/scratch/PAS0471/jelmer/bactopia/a4/7efdbac3ad78bbf1ec4538a12b4e9e
+  error [nextflow.exception.ProcessFailedException]: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG35)` terminated with an error exit status (1)
+Dec-17 20:40:40.959 [Task monitor] INFO  nextflow.processor.TaskProcessor - [a4/7efdba] NOTE: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG35)` terminated with an error exit status (1) -- Execution is retried (1)
+Dec-17 20:40:41.152 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG116) > jobId: 25225493; workDir: /fs/scratch/PAS0471/jelmer/bactopia/0b/688e93422b7e7bd853c09ced03c0c9
+Dec-17 20:40:41.153 [Task submitter] INFO  nextflow.Session - [0b/688e93] Re-submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG116)
+Dec-17 20:40:41.299 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG35) > jobId: 25225494; workDir: /fs/scratch/PAS0471/jelmer/bactopia/b4/18262f0f2d638a886f349e082a28da
+Dec-17 20:40:41.299 [Task submitter] INFO  nextflow.Session - [b4/18262f] Re-submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG35)
+Dec-17 20:40:45.945 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 25225279; id: 61; name: BACTOPIATOOLS:GTDB:CLASSIFY (FG89); status: COMPLETED; exit: 1; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/ea/4da3fee7398747801be73961e3df4e started: 1702863115896; exited: 2023-12-18T01:40:45.449218Z; ]
+Dec-17 20:40:45.945 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=BACTOPIATOOLS:GTDB:CLASSIFY (FG89); work-dir=/fs/scratch/PAS0471/jelmer/bactopia/ea/4da3fee7398747801be73961e3df4e
+  error [nextflow.exception.ProcessFailedException]: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG89)` terminated with an error exit status (1)
+Dec-17 20:40:45.947 [Task monitor] INFO  nextflow.processor.TaskProcessor - [ea/4da3fe] NOTE: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG89)` terminated with an error exit status (1) -- Execution is retried (1)
+Dec-17 20:40:45.958 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 25225289; id: 72; name: BACTOPIATOOLS:GTDB:CLASSIFY (FG99); status: COMPLETED; exit: 1; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/7e/e30966a68255edcbaf570d897a3a9f started: 1702863115945; exited: 2023-12-18T01:40:44.743516Z; ]
+Dec-17 20:40:45.958 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=BACTOPIATOOLS:GTDB:CLASSIFY (FG99); work-dir=/fs/scratch/PAS0471/jelmer/bactopia/7e/e30966a68255edcbaf570d897a3a9f
+  error [nextflow.exception.ProcessFailedException]: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG99)` terminated with an error exit status (1)
+Dec-17 20:40:45.959 [Task monitor] INFO  nextflow.processor.TaskProcessor - [7e/e30966] NOTE: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG99)` terminated with an error exit status (1) -- Execution is retried (1)
+Dec-17 20:40:46.144 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG89) > jobId: 25225497; workDir: /fs/scratch/PAS0471/jelmer/bactopia/5c/06b37c972cf6334d740356507ecea7
+Dec-17 20:40:46.144 [Task submitter] INFO  nextflow.Session - [5c/06b37c] Re-submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG89)
+Dec-17 20:40:46.351 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG99) > jobId: 25225498; workDir: /fs/scratch/PAS0471/jelmer/bactopia/e9/ec084e874f34b7713999d8153cd31a
+Dec-17 20:40:46.351 [Task submitter] INFO  nextflow.Session - [e9/ec084e] Re-submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG99)
+Dec-17 20:40:50.946 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 25225285; id: 67; name: BACTOPIATOOLS:GTDB:CLASSIFY (FG21); status: COMPLETED; exit: 1; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/92/359e8e44dabf0eaab75c3353a7ab13 started: 1702863115928; exited: 2023-12-18T01:40:46.146115Z; ]
+Dec-17 20:40:50.946 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=BACTOPIATOOLS:GTDB:CLASSIFY (FG21); work-dir=/fs/scratch/PAS0471/jelmer/bactopia/92/359e8e44dabf0eaab75c3353a7ab13
+  error [nextflow.exception.ProcessFailedException]: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG21)` terminated with an error exit status (1)
+Dec-17 20:40:50.947 [Task monitor] INFO  nextflow.processor.TaskProcessor - [92/359e8e] NOTE: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG21)` terminated with an error exit status (1) -- Execution is retried (1)
+Dec-17 20:40:50.958 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 25225286; id: 68; name: BACTOPIATOOLS:GTDB:CLASSIFY (FG36); status: COMPLETED; exit: 1; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/c5/757d6850aac7ee44a1aeb287eee6c3 started: 1702863115932; exited: 2023-12-18T01:40:46.582029Z; ]
+Dec-17 20:40:50.959 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=BACTOPIATOOLS:GTDB:CLASSIFY (FG36); work-dir=/fs/scratch/PAS0471/jelmer/bactopia/c5/757d6850aac7ee44a1aeb287eee6c3
+  error [nextflow.exception.ProcessFailedException]: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG36)` terminated with an error exit status (1)
+Dec-17 20:40:50.960 [Task monitor] INFO  nextflow.processor.TaskProcessor - [c5/757d68] NOTE: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG36)` terminated with an error exit status (1) -- Execution is retried (1)
+Dec-17 20:40:50.970 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 25225287; id: 69; name: BACTOPIATOOLS:GTDB:CLASSIFY (FG98); status: COMPLETED; exit: 1; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/72/66b08fa86232265f0bf6b3907b7927 started: 1702863115937; exited: 2023-12-18T01:40:46.139084Z; ]
+Dec-17 20:40:50.970 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=BACTOPIATOOLS:GTDB:CLASSIFY (FG98); work-dir=/fs/scratch/PAS0471/jelmer/bactopia/72/66b08fa86232265f0bf6b3907b7927
+  error [nextflow.exception.ProcessFailedException]: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG98)` terminated with an error exit status (1)
+Dec-17 20:40:50.970 [Task monitor] INFO  nextflow.processor.TaskProcessor - [72/66b08f] NOTE: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG98)` terminated with an error exit status (1) -- Execution is retried (1)
+Dec-17 20:40:51.156 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG21) > jobId: 25225503; workDir: /fs/scratch/PAS0471/jelmer/bactopia/6d/dd4c4851852d9825924d6a8c324598
+Dec-17 20:40:51.156 [Task submitter] INFO  nextflow.Session - [6d/dd4c48] Re-submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG21)
+Dec-17 20:40:51.364 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG36) > jobId: 25225504; workDir: /fs/scratch/PAS0471/jelmer/bactopia/9f/45446ff740f8850da7bd64f0fbfcad
+Dec-17 20:40:51.365 [Task submitter] INFO  nextflow.Session - [9f/45446f] Re-submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG36)
+Dec-17 20:40:51.579 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG98) > jobId: 25225505; workDir: /fs/scratch/PAS0471/jelmer/bactopia/d2/e1965246592253cb146d1457e2b250
+Dec-17 20:40:51.579 [Task submitter] INFO  nextflow.Session - [d2/e19652] Re-submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG98)
+Dec-17 20:40:55.947 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 25225290; id: 71; name: BACTOPIATOOLS:GTDB:CLASSIFY (FG37); status: COMPLETED; exit: 1; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/52/f64179a1d3dccc734f4ec4b2132467 started: 1702863115949; exited: 2023-12-18T01:40:53.430504Z; ]
+Dec-17 20:40:55.947 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=BACTOPIATOOLS:GTDB:CLASSIFY (FG37); work-dir=/fs/scratch/PAS0471/jelmer/bactopia/52/f64179a1d3dccc734f4ec4b2132467
+  error [nextflow.exception.ProcessFailedException]: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG37)` terminated with an error exit status (1)
+Dec-17 20:40:55.948 [Task monitor] INFO  nextflow.processor.TaskProcessor - [52/f64179] NOTE: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG37)` terminated with an error exit status (1) -- Execution is retried (1)
+Dec-17 20:40:56.156 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG37) > jobId: 25225506; workDir: /fs/scratch/PAS0471/jelmer/bactopia/9b/5a03e827ac87f638409ff537612241
+Dec-17 20:40:56.156 [Task submitter] INFO  nextflow.Session - [9b/5a03e8] Re-submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG37)
+Dec-17 20:41:10.947 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 25225281; id: 63; name: BACTOPIATOOLS:GTDB:CLASSIFY (FG13); status: COMPLETED; exit: 1; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/fb/f1cdf0802324e6720d9d63b21a197e started: 1702863115907; exited: 2023-12-18T01:41:07.736311Z; ]
+Dec-17 20:41:10.948 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=BACTOPIATOOLS:GTDB:CLASSIFY (FG13); work-dir=/fs/scratch/PAS0471/jelmer/bactopia/fb/f1cdf0802324e6720d9d63b21a197e
+  error [nextflow.exception.ProcessFailedException]: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG13)` terminated with an error exit status (1)
+Dec-17 20:41:10.949 [Task monitor] INFO  nextflow.processor.TaskProcessor - [fb/f1cdf0] NOTE: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG13)` terminated with an error exit status (1) -- Execution is retried (1)
+Dec-17 20:41:11.174 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG13) > jobId: 25225511; workDir: /fs/scratch/PAS0471/jelmer/bactopia/bc/d5cc0a1e088377b902e174858cebf5
+Dec-17 20:41:11.174 [Task submitter] INFO  nextflow.Session - [bc/d5cc0a] Re-submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG13)
+Dec-17 20:41:15.951 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor slurm > tasks to be completed: 71 -- submitted tasks are shown below
+~> TaskHandler[jobId: 25225223; id: 4; name: BACTOPIATOOLS:GTDB:CLASSIFY (FG153); status: RUNNING; exit: -; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/b1/400ecf1b98d03cc7ce1b1709c7eadf started: 1702863085925; exited: -; ]
+~> TaskHandler[jobId: 25225242; id: 26; name: BACTOPIATOOLS:GTDB:CLASSIFY (FG56); status: RUNNING; exit: -; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/8f/23ada33bf9ea76e67c9137f5b66932 started: 1702863085990; exited: -; ]
+~> TaskHandler[jobId: 25225275; id: 57; name: BACTOPIATOOLS:GTDB:CLASSIFY (FG152); status: RUNNING; exit: -; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/4b/d014fec570fb98719b5bbe0de2b18e started: 1702863086070; exited: 2023-12-18T01:41:11.322229Z; ]
+~> TaskHandler[jobId: 25225282; id: 64; name: BACTOPIATOOLS:GTDB:CLASSIFY (FG60); status: RUNNING; exit: -; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/4b/6cf7cd8a12f0979f5bf2b4ce70f9e5 started: 1702863115913; exited: 2023-12-18T01:41:13.187276Z; ]
+~> TaskHandler[jobId: 25225423; id: 73; name: BACTOPIATOOLS:GTDB:CLASSIFY (FG2); status: SUBMITTED; exit: -; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/b2/220573bd0ef5586efea075fc29b51f started: -; exited: -; ]
+~> TaskHandler[jobId: 25225424; id: 74; name: BACTOPIATOOLS:GTDB:CLASSIFY (FG158); status: SUBMITTED; exit: -; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/2e/d8024c2d4c5de2df950267c2a45b3d started: -; exited: -; ]
+~> TaskHandler[jobId: 25225425; id: 75; name: BACTOPIATOOLS:GTDB:CLASSIFY (FG16); status: SUBMITTED; exit: -; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/9b/e007e41eb075aa8e3a6dd4e12e2a55 started: -; exited: -; ]
+~> TaskHandler[jobId: 25225426; id: 76; name: BACTOPIATOOLS:GTDB:CLASSIFY (FG138); status: SUBMITTED; exit: -; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/dc/5593a1424099a20de94a1f7713922a started: -; exited: -; ]
+~> TaskHandler[jobId: 25225427; id: 77; name: BACTOPIATOOLS:GTDB:CLASSIFY (FG3); status: SUBMITTED; exit: -; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/85/c3255304a19ee0ed48de5622301167 started: -; exited: -; ]
+~> TaskHandler[jobId: 25225428; id: 78; name: BACTOPIATOOLS:GTDB:CLASSIFY (FG128); status: SUBMITTED; exit: -; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/11/ae44b01bfff439412540f50d835a71 started: -; exited: -; ]
+.. remaining tasks omitted.
+Dec-17 20:41:15.954 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 25225275; id: 57; name: BACTOPIATOOLS:GTDB:CLASSIFY (FG152); status: COMPLETED; exit: 1; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/4b/d014fec570fb98719b5bbe0de2b18e started: 1702863086070; exited: 2023-12-18T01:41:11.322229Z; ]
+Dec-17 20:41:15.954 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=BACTOPIATOOLS:GTDB:CLASSIFY (FG152); work-dir=/fs/scratch/PAS0471/jelmer/bactopia/4b/d014fec570fb98719b5bbe0de2b18e
+  error [nextflow.exception.ProcessFailedException]: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG152)` terminated with an error exit status (1)
+Dec-17 20:41:15.955 [Task monitor] INFO  nextflow.processor.TaskProcessor - [4b/d014fe] NOTE: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG152)` terminated with an error exit status (1) -- Execution is retried (1)
+Dec-17 20:41:15.961 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 25225282; id: 64; name: BACTOPIATOOLS:GTDB:CLASSIFY (FG60); status: COMPLETED; exit: 1; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/4b/6cf7cd8a12f0979f5bf2b4ce70f9e5 started: 1702863115913; exited: 2023-12-18T01:41:13.187276Z; ]
+Dec-17 20:41:15.961 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=BACTOPIATOOLS:GTDB:CLASSIFY (FG60); work-dir=/fs/scratch/PAS0471/jelmer/bactopia/4b/6cf7cd8a12f0979f5bf2b4ce70f9e5
+  error [nextflow.exception.ProcessFailedException]: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG60)` terminated with an error exit status (1)
+Dec-17 20:41:15.962 [Task monitor] INFO  nextflow.processor.TaskProcessor - [4b/6cf7cd] NOTE: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG60)` terminated with an error exit status (1) -- Execution is retried (1)
+Dec-17 20:41:16.171 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG152) > jobId: 25225515; workDir: /fs/scratch/PAS0471/jelmer/bactopia/b8/683d48f98388613bcc06d6d7beda30
+Dec-17 20:41:16.171 [Task submitter] INFO  nextflow.Session - [b8/683d48] Re-submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG152)
+Dec-17 20:41:16.386 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG60) > jobId: 25225516; workDir: /fs/scratch/PAS0471/jelmer/bactopia/50/01f643bc0b41d857ec40a65db45fdc
+Dec-17 20:41:16.387 [Task submitter] INFO  nextflow.Session - [50/01f643] Re-submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG60)
+Dec-17 20:41:55.962 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 25225242; id: 26; name: BACTOPIATOOLS:GTDB:CLASSIFY (FG56); status: COMPLETED; exit: 0; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/8f/23ada33bf9ea76e67c9137f5b66932 started: 1702863085990; exited: 2023-12-18T01:41:55.454902Z; ]
+Dec-17 20:41:56.009 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process BACTOPIATOOLS:GTDB:CLASSIFY > Skipping output binding because one or more optional files are missing: fileoutparam<2>
+Dec-17 20:42:00.962 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 25225223; id: 4; name: BACTOPIATOOLS:GTDB:CLASSIFY (FG153); status: COMPLETED; exit: 1; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/b1/400ecf1b98d03cc7ce1b1709c7eadf started: 1702863085925; exited: 2023-12-18T01:42:00.078944Z; ]
+Dec-17 20:42:00.963 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=BACTOPIATOOLS:GTDB:CLASSIFY (FG153); work-dir=/fs/scratch/PAS0471/jelmer/bactopia/b1/400ecf1b98d03cc7ce1b1709c7eadf
+  error [nextflow.exception.ProcessFailedException]: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG153)` terminated with an error exit status (1)
+Dec-17 20:42:00.964 [Task monitor] INFO  nextflow.processor.TaskProcessor - [b1/400ecf] NOTE: Process `BACTOPIATOOLS:GTDB:CLASSIFY (FG153)` terminated with an error exit status (1) -- Execution is retried (1)
+Dec-17 20:42:01.184 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process BACTOPIATOOLS:GTDB:CLASSIFY (FG153) > jobId: 25225523; workDir: /fs/scratch/PAS0471/jelmer/bactopia/cb/e77516230a8b14cc8ca29d1605751f
+Dec-17 20:42:01.184 [Task submitter] INFO  nextflow.Session - [cb/e77516] Re-submitted process > BACTOPIATOOLS:GTDB:CLASSIFY (FG153)
+Dec-17 20:46:15.975 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor slurm > tasks to be completed: 70 -- submitted tasks are shown below
+~> TaskHandler[jobId: 25225423; id: 73; name: BACTOPIATOOLS:GTDB:CLASSIFY (FG2); status: SUBMITTED; exit: -; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/b2/220573bd0ef5586efea075fc29b51f started: -; exited: -; ]
+~> TaskHandler[jobId: 25225424; id: 74; name: BACTOPIATOOLS:GTDB:CLASSIFY (FG158); status: SUBMITTED; exit: -; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/2e/d8024c2d4c5de2df950267c2a45b3d started: -; exited: -; ]
+~> TaskHandler[jobId: 25225425; id: 75; name: BACTOPIATOOLS:GTDB:CLASSIFY (FG16); status: SUBMITTED; exit: -; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/9b/e007e41eb075aa8e3a6dd4e12e2a55 started: -; exited: -; ]
+~> TaskHandler[jobId: 25225426; id: 76; name: BACTOPIATOOLS:GTDB:CLASSIFY (FG138); status: SUBMITTED; exit: -; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/dc/5593a1424099a20de94a1f7713922a started: -; exited: -; ]
+~> TaskHandler[jobId: 25225427; id: 77; name: BACTOPIATOOLS:GTDB:CLASSIFY (FG3); status: SUBMITTED; exit: -; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/85/c3255304a19ee0ed48de5622301167 started: -; exited: -; ]
+~> TaskHandler[jobId: 25225428; id: 78; name: BACTOPIATOOLS:GTDB:CLASSIFY (FG128); status: SUBMITTED; exit: -; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/11/ae44b01bfff439412540f50d835a71 started: -; exited: -; ]
+~> TaskHandler[jobId: 25225429; id: 79; name: BACTOPIATOOLS:GTDB:CLASSIFY (FG52); status: SUBMITTED; exit: -; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/2f/8793b14b8585a113fd90f69c2275fd started: -; exited: -; ]
+~> TaskHandler[jobId: 25225430; id: 80; name: BACTOPIATOOLS:GTDB:CLASSIFY (FG24); status: SUBMITTED; exit: -; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/49/9f84a58a6501d4241dcb3faac5af2d started: -; exited: -; ]
+~> TaskHandler[jobId: 25225431; id: 81; name: BACTOPIATOOLS:GTDB:CLASSIFY (FG39); status: SUBMITTED; exit: -; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/8b/b20ec0a02c203229baa31a2e89506f started: -; exited: -; ]
+~> TaskHandler[jobId: 25225432; id: 82; name: BACTOPIATOOLS:GTDB:CLASSIFY (FG121); status: SUBMITTED; exit: -; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/84/1c606b8f0f1e5aaa79ff8cf462f1d1 started: -; exited: -; ]
+.. remaining tasks omitted.
+Dec-17 20:51:01.005 [Task monitor] DEBUG nextflow.file.FileHelper - NFS path (false): /fs/scratch/PAS0471/jelmer/bactopia
+Dec-17 20:51:16.007 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor slurm > tasks to be completed: 70 -- submitted tasks are shown below
+~> TaskHandler[jobId: 25225423; id: 73; name: BACTOPIATOOLS:GTDB:CLASSIFY (FG2); status: RUNNING; exit: -; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/b2/220573bd0ef5586efea075fc29b51f started: 1702864101189; exited: -; ]
+~> TaskHandler[jobId: 25225424; id: 74; name: BACTOPIATOOLS:GTDB:CLASSIFY (FG158); status: RUNNING; exit: -; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/2e/d8024c2d4c5de2df950267c2a45b3d started: 1702864101190; exited: -; ]
+~> TaskHandler[jobId: 25225425; id: 75; name: BACTOPIATOOLS:GTDB:CLASSIFY (FG16); status: RUNNING; exit: -; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/9b/e007e41eb075aa8e3a6dd4e12e2a55 started: 1702864101191; exited: -; ]
+~> TaskHandler[jobId: 25225426; id: 76; name: BACTOPIATOOLS:GTDB:CLASSIFY (FG138); status: RUNNING; exit: -; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/dc/5593a1424099a20de94a1f7713922a started: 1702864101191; exited: -; ]
+~> TaskHandler[jobId: 25225427; id: 77; name: BACTOPIATOOLS:GTDB:CLASSIFY (FG3); status: RUNNING; exit: -; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/85/c3255304a19ee0ed48de5622301167 started: 1702864101192; exited: -; ]
+~> TaskHandler[jobId: 25225428; id: 78; name: BACTOPIATOOLS:GTDB:CLASSIFY (FG128); status: RUNNING; exit: -; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/11/ae44b01bfff439412540f50d835a71 started: 1702864101192; exited: -; ]
+~> TaskHandler[jobId: 25225429; id: 79; name: BACTOPIATOOLS:GTDB:CLASSIFY (FG52); status: RUNNING; exit: -; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/2f/8793b14b8585a113fd90f69c2275fd started: 1702864101193; exited: -; ]
+~> TaskHandler[jobId: 25225430; id: 80; name: BACTOPIATOOLS:GTDB:CLASSIFY (FG24); status: RUNNING; exit: -; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/49/9f84a58a6501d4241dcb3faac5af2d started: 1702864101193; exited: -; ]
+~> TaskHandler[jobId: 25225431; id: 81; name: BACTOPIATOOLS:GTDB:CLASSIFY (FG39); status: RUNNING; exit: -; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/8b/b20ec0a02c203229baa31a2e89506f started: 1702864101194; exited: -; ]
+~> TaskHandler[jobId: 25225432; id: 82; name: BACTOPIATOOLS:GTDB:CLASSIFY (FG121); status: RUNNING; exit: -; error: -; workDir: /fs/scratch/PAS0471/jelmer/bactopia/84/1c606b8f0f1e5aaa79ff8cf462f1d1 started: 1702864101194; exited: -; ]
+.. remaining tasks omitted.
